@@ -110,14 +110,14 @@ export default function BudgetPage() {
               <ul className="space-y-1">
                 {plan.works.map((work, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                    <span className="text-primary">✓</span>
+                    <span className="text-primary"></span>
                     {work}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="text-xs text-gray-500 bg-yellow-50 rounded-lg p-3 border border-yellow-200">
-              💡 {plan.tips}
+               {plan.tips}
             </div>
           </div>
         ))}
@@ -139,11 +139,11 @@ export default function BudgetPage() {
       {/* Related Links */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
         <Link href="/cost/total/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
-          <div className="font-bold text-gray-800">📊 費用相場の詳細を見る</div>
+          <div className="font-bold text-gray-800"> 費用相場の詳細を見る</div>
           <div className="text-sm text-gray-500 mt-1">工事の種類別の詳しい費用相場</div>
         </Link>
         <Link href="/ranking/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
-          <div className="font-bold text-gray-800">🏆 業者ランキングを見る</div>
+          <div className="font-bold text-gray-800"> 業者ランキングを見る</div>
           <div className="text-sm text-gray-500 mt-1">おすすめ外構業者10社を比較</div>
         </Link>
       </div>

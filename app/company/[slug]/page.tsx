@@ -68,7 +68,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {company.features.map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
-              <span className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-white text-xs shrink-0">✓</span>
+              <span className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-white text-xs shrink-0"></span>
               {feature}
             </li>
           ))}

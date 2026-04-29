@@ -43,7 +43,7 @@ export default function CheapRankingPage() {
             "自分でできる部分はDIYで対応して費用削減",
           ].map((tip, i) => (
             <li key={i} className="flex items-start gap-2">
-              <span className="text-primary font-bold">✓</span>
+              <span className="text-primary font-bold"></span>
               {tip}
             </li>
           ))}

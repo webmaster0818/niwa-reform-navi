@@ -6,7 +6,7 @@ export default function SiteFooter() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">🌿 庭リフォームナビ</h3>
+            <h3 className="font-bold text-lg mb-4"> 庭リフォームナビ</h3>
             <p className="text-sm text-amber-100 leading-relaxed">
               庭・外構リフォームの費用相場、業者比較、見積もりに関する情報を発信する専門メディアです。
             </p>
@@ -42,7 +42,7 @@ export default function SiteFooter() {
         </div>
         <div className="border-t border-amber-700 mt-8 pt-6 text-xs text-amber-200 text-center">
           <p>※当サイトは情報提供を目的としています。各サービスの詳細は公式サイトをご確認ください。</p>
-          <p className="mt-2">© 2025 庭リフォームナビ. All rights reserved.</p>
+          <p className="mt-2"> 2025 庭リフォームナビ. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -97,7 +97,7 @@ export default function CostTotalPage() {
             "外構ローンや補助金制度を活用する",
           ].map((tip, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-              <span className="text-primary font-bold mt-0.5">✓</span>
+              <span className="text-primary font-bold mt-0.5"></span>
               {tip}
             </li>
           ))}
@@ -107,7 +107,7 @@ export default function CostTotalPage() {
       {/* Links */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <Link href="/cost/budget/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
-          <div className="font-bold text-gray-800 mb-1">💰 予算別プランガイド</div>
+          <div className="font-bold text-gray-800 mb-1"> 予算別プランガイド</div>
           <div className="text-sm text-gray-500">予算に合わせた工事プランを提案</div>
         </Link>
         <Link href="/ranking/estimate/" className="bg-accent text-white rounded-xl p-4 hover:bg-blue-700 transition-colors">

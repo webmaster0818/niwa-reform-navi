@@ -4,14 +4,14 @@ import companies from "@/data/companies.json";
 import works from "@/data/works.json";
 
 const workIcons: Record<string, string> = {
-  "wood-deck": "🪵",
-  "carport": "🚗",
-  "fence": "🔲",
+  "wood-deck": "",
+  "carport": "",
+  "fence": "",
   "concrete": "⬜",
-  "garden-room": "🏡",
-  "gate": "🚪",
-  "garden-design": "🌸",
-  "lighting": "💡",
+  "garden-room": "",
+  "gate": "",
+  "garden-design": "",
+  "lighting": "",
 };
 
 const faqData = [
@@ -88,9 +88,9 @@ export default function Home() {
           </div>
           {/* Trust badges */}
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-emerald-100">
-            <span className="flex items-center gap-1.5">✓ 完全無料</span>
-            <span className="flex items-center gap-1.5">✓ 最大5社比較</span>
-            <span className="flex items-center gap-1.5">✓ しつこい営業なし</span>
+            <span className="flex items-center gap-1.5"> 完全無料</span>
+            <span className="flex items-center gap-1.5"> 最大5社比較</span>
+            <span className="flex items-center gap-1.5"> しつこい営業なし</span>
           </div>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function Home() {
               className="group bg-white rounded-2xl p-5 text-center shadow-sm hover:shadow-lg border border-gray-100 hover:border-primary transition-all hover:-translate-y-1"
             >
               <div className="text-4xl mb-3 group-hover:scale-110 transition-transform inline-block">
-                {workIcons[work.slug] || "🌿"}
+                {workIcons[work.slug] || ""}
               </div>
               <div className="font-bold text-gray-800 group-hover:text-primary text-sm mb-1">
                 {work.title}
@@ -156,7 +156,7 @@ export default function Home() {
                         : "bg-gradient-to-r from-amber-500 to-amber-600"
                     }`}
                   >
-                    {i === 0 ? "🥇 1位" : i === 1 ? "🥈 2位" : "🥉 3位"}
+                    {i === 0 ? " 1位" : i === 1 ? " 2位" : " 3位"}
                   </span>
                 </div>
                 {i === 0 && (
@@ -171,7 +171,7 @@ export default function Home() {
                 <ul className="text-sm text-gray-600 space-y-2 mb-5">
                   {company.pros.slice(0, 2).map((pro, j) => (
                     <li key={j} className="flex items-start gap-2">
-                      <span className="text-primary font-bold mt-0.5 shrink-0">✓</span>
+                      <span className="text-primary font-bold mt-0.5 shrink-0"></span>
                       <span>{pro}</span>
                     </li>
                   ))}
@@ -273,12 +273,12 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { href: "/scene/new-house/", label: "新築外構", desc: "建物に合った外構をゼロから計画", icon: "🏠", color: "from-emerald-50 to-emerald-100" },
-              { href: "/scene/reform/", label: "庭リフォーム", desc: "既存の庭を一新したい", icon: "🔨", color: "from-amber-50 to-amber-100" },
-              { href: "/scene/barrier-free/", label: "バリアフリー", desc: "安全で使いやすい庭づくり", icon: "♿", color: "from-blue-50 to-blue-100" },
-              { href: "/scene/diy/", label: "DIY×プロ", desc: "費用を抑えて理想の庭へ", icon: "🛠️", color: "from-purple-50 to-purple-100" },
-              { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースを最大活用", icon: "📐", color: "from-rose-50 to-rose-100" },
-              { href: "/cost/budget/", label: "予算別プラン", desc: "予算に合わせたプランを提案", icon: "💰", color: "from-yellow-50 to-yellow-100" },
+              { href: "/scene/new-house/", label: "新築外構", desc: "建物に合った外構をゼロから計画", icon: "", color: "from-emerald-50 to-emerald-100" },
+              { href: "/scene/reform/", label: "庭リフォーム", desc: "既存の庭を一新したい", icon: "", color: "from-amber-50 to-amber-100" },
+              { href: "/scene/barrier-free/", label: "バリアフリー", desc: "安全で使いやすい庭づくり", icon: "", color: "from-blue-50 to-blue-100" },
+              { href: "/scene/diy/", label: "DIY×プロ", desc: "費用を抑えて理想の庭へ", icon: "", color: "from-purple-50 to-purple-100" },
+              { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースを最大活用", icon: "", color: "from-rose-50 to-rose-100" },
+              { href: "/cost/budget/", label: "予算別プラン", desc: "予算に合わせたプランを提案", icon: "", color: "from-yellow-50 to-yellow-100" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -353,9 +353,9 @@ export default function Home() {
             無料見積もりを依頼する
           </Link>
           <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-blue-200">
-            <span>✓ 完全無料・登録不要</span>
-            <span>✓ 最大5社比較</span>
-            <span>✓ 断るのも自由</span>
+            <span> 完全無料・登録不要</span>
+            <span> 最大5社比較</span>
+            <span> 断るのも自由</span>
           </div>
         </div>
       </section>
