@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niwa-reform-navi.pages.dev/sitemap.xml
