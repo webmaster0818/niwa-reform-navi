@@ -277,20 +277,20 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { href: "/scene/new-house/", label: "新築外構", desc: "建物に合った外構をゼロから計画", icon: "", color: "from-emerald-50 to-emerald-100" },
-              { href: "/scene/reform/", label: "庭リフォーム", desc: "既存の庭を一新したい", icon: "", color: "from-amber-50 to-amber-100" },
-              { href: "/scene/barrier-free/", label: "バリアフリー", desc: "安全で使いやすい庭づくり", icon: "", color: "from-blue-50 to-blue-100" },
-              { href: "/scene/diy/", label: "DIY×プロ", desc: "費用を抑えて理想の庭へ", icon: "", color: "from-purple-50 to-purple-100" },
-              { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースを最大活用", icon: "", color: "from-rose-50 to-rose-100" },
-              { href: "/cost/budget/", label: "予算別プラン", desc: "予算に合わせたプランを提案", icon: "", color: "from-yellow-50 to-yellow-100" },
+              { href: "/scene/new-house/", label: "新築外構", desc: "建物に合った外構をゼロから計画", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>, color: "from-emerald-50 to-emerald-100" },
+              { href: "/scene/reform/", label: "庭リフォーム", desc: "既存の庭を一新したい", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>, color: "from-amber-50 to-amber-100" },
+              { href: "/scene/barrier-free/", label: "バリアフリー", desc: "安全で使いやすい庭づくり", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="5" r="2"/><path strokeLinecap="round" strokeLinejoin="round" d="M12 7v6m-4 4h8M8 17l-2 4m10-4l2 4"/></svg>, color: "from-blue-50 to-blue-100" },
+              { href: "/scene/diy/", label: "DIY×プロ", desc: "費用を抑えて理想の庭へ", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>, color: "from-purple-50 to-purple-100" },
+              { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースを最大活用", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><polygon points="12 2 2 22 22 22"/></svg>, color: "from-rose-50 to-rose-100" },
+              { href: "/cost/budget/", label: "予算別プラン", desc: "予算に合わせたプランを提案", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><line x1="12" y1="1" x2="12" y2="23"/><path strokeLinecap="round" d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>, color: "from-yellow-50 to-yellow-100" },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={`group flex items-center gap-4 bg-gradient-to-br ${item.color} rounded-2xl p-5 hover:shadow-md transition-all hover:-translate-y-0.5 border border-white`}
               >
-                <div className="text-4xl group-hover:scale-110 transition-transform shrink-0">
-                  {item.icon}
+                <div className="group-hover:scale-110 transition-transform shrink-0">
+                  {item.iconEl}
                 </div>
                 <div>
                   <div className="font-bold text-gray-800 group-hover:text-primary transition-colors mb-0.5">
