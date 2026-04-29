@@ -3,15 +3,15 @@ import Image from "next/image";
 import companies from "@/data/companies.json";
 import works from "@/data/works.json";
 
-const workIcons: Record<string, string> = {
-  "wood-deck": "",
-  "carport": "",
-  "fence": "",
-  "concrete": "⬜",
-  "garden-room": "",
-  "gate": "",
-  "garden-design": "",
-  "lighting": "",
+const workIconSrc: Record<string, string> = {
+  "wood-deck": "/images/icon-wood-deck.png",
+  "carport": "/images/icon-carport.png",
+  "fence": "/images/icon-fence.png",
+  "concrete": "/images/icon-concrete.png",
+  "garden-room": "/images/icon-garden-room.png",
+  "gate": "/images/icon-gate.png",
+  "garden-design": "/images/icon-design.png",
+  "lighting": "/images/icon-lighting.png",
 };
 
 const faqData = [
@@ -110,8 +110,10 @@ export default function Home() {
               href={`/work/${work.slug}/`}
               className="group bg-white rounded-2xl p-5 text-center shadow-sm hover:shadow-lg border border-gray-100 hover:border-primary transition-all hover:-translate-y-1"
             >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform inline-block">
-                {workIcons[work.slug] || ""}
+              <div className="mb-3 group-hover:scale-110 transition-transform inline-block">
+                {workIconSrc[work.slug] ? (
+                  <Image src={workIconSrc[work.slug]} alt={work.title} width={40} height={40} className="w-10 h-10 inline-block" />
+                ) : null}
               </div>
               <div className="font-bold text-gray-800 group-hover:text-primary text-sm mb-1">
                 {work.title}
@@ -231,7 +233,9 @@ export default function Home() {
                       href={`/work/${work.slug}/`}
                       className="font-medium text-primary hover:underline flex items-center gap-2"
                     >
-                      <span>{workIcons[work.slug]}</span>
+                      {workIconSrc[work.slug] ? (
+                        <Image src={workIconSrc[work.slug]} alt={work.title} width={24} height={24} className="w-6 h-6 inline-block" />
+                      ) : null}
                       <span>{work.title}</span>
                     </Link>
                   </td>
