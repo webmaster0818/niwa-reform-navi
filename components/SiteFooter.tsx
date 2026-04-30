@@ -40,9 +40,14 @@ export default function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-amber-700 mt-8 pt-6 text-xs text-amber-200 text-center">
-          <p>※当サイトは情報提供を目的としています。各サービスの詳細は公式サイトをご確認ください。</p>
-          <p className="mt-2"> 2025 庭リフォームナビ. All rights reserved.</p>
+        <div className="border-t border-amber-700 mt-8 pt-6 text-xs text-amber-200">
+          <p className="text-center mb-3">※当サイトは情報提供を目的としています。各サービスの詳細は公式サイトをご確認ください。</p>
+          <div className="flex flex-wrap justify-center gap-4 mb-3">
+            <Link href="/terms/" className="hover:text-white transition-colors">利用規約</Link>
+            <Link href="/privacy/" className="hover:text-white transition-colors">プライバシーポリシー</Link>
+            <Link href="/content-policy/" className="hover:text-white transition-colors">記事の制作ポリシー</Link>
+          </div>
+          <p className="text-center"> 2025 庭リフォームナビ. All rights reserved.</p>
         </div>
       </div>
     </footer>
