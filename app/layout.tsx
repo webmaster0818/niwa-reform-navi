@@ -12,6 +12,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://garden-reform-navi.com"),
   title: "庭リフォームナビ | 外構・庭工事の比較・見積もりサイト",
   description: "庭リフォームの費用・業者比較・見積もりならお任せ。ウッドデッキ、カーポート、フェンス、コンクリートなど外構工事の専門比較サイトです。",
 };
