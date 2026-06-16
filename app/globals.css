@@ -7,8 +7,19 @@
   --color-bg: #ECFDF5;
   --color-primary-dark: #047857;
   --color-primary-light: #D1FAE5;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F0FBF5;
+  --color-border: #D6EBDF;
+  --color-text-primary: #10241B;
+  --color-text-secondary: #4A5B52;
+  --color-text-muted: #8AA396;
+  --color-warning: #F59E0B;
   --font-sans: var(--font-noto-sans-jp), sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
+
+.label { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+.mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
 
 :root {
   --background: #ECFDF5;
