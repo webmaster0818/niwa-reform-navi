@@ -1,4 +1,5 @@
 import Link from "next/link";
+import areas from "@/data/areas.json";
 
 export default function SiteFooter() {
   return (
@@ -39,10 +40,14 @@ export default function SiteFooter() {
               <li><Link href="/scene/barrier-free/" className="hover:text-white transition-colors">バリアフリー</Link></li>
             </ul>
             <h4 className="font-bold mb-3 mt-6 text-amber-200">エリア別ガイド</h4>
-            <ul className="space-y-2 text-sm text-amber-100">
-              <li><Link href="/area/kanto/" className="hover:text-white transition-colors">関東</Link></li>
-              <li><Link href="/area/kansai/" className="hover:text-white transition-colors">関西</Link></li>
-              <li><Link href="/area/tokai/" className="hover:text-white transition-colors">東海</Link></li>
+            <ul className="flex flex-wrap gap-x-3 gap-y-2 text-sm text-amber-100">
+              {areas.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/area/${a.slug}/`} className="hover:text-white transition-colors">
+                    {a.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
