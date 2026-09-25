@@ -4,7 +4,7 @@ import works from "@/data/works.json";
 
 export const metadata = {
   title: "外構・庭リフォームの費用相場まとめ2025 | 庭リフォームナビ",
-  description: "外構工事・庭リフォームの費用相場を工事の種類別に詳しく解説。ウッドデッキ・カーポート・フェンスなど全工種の費用目安を紹介します。",
+  description: "外構工事・庭リフォームの費用相場を工事の種類別に詳しく解説。ウッドデッキ・カーポート・フェンスなど全工種の費用目安を紹介します。",  alternates: { canonical: "/cost/total/" },
 };
 
 const costDetails = [

@@ -4,7 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "外構工事 一括見積もりおすすめサービス2025 | 庭リフォームナビ",
-  description: "外構工事の一括見積もりにおすすめのサービスを比較。タウンライフエクステリアなど無料で複数業者に依頼できるサービスを紹介。",
+  description: "外構工事の一括見積もりにおすすめのサービスを比較。タウンライフエクステリアなど無料で複数業者に依頼できるサービスを紹介。",  alternates: { canonical: "/ranking/estimate/" },
 };
 
 const estimateRanking = [

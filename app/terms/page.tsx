@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata = {
   title: "利用規約 | 庭リフォームナビ",
-  description: "庭リフォームナビの利用規約です。サービス利用前に必ずお読みください。",
+  description: "庭リフォームナビの利用規約です。サービス利用前に必ずお読みください。",  alternates: { canonical: "/terms/" },
 };
 
 export default function TermsPage() {

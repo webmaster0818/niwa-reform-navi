@@ -45,7 +45,7 @@
     "cons": ["外構専門サービスより提案力が弱い場合あり", "業者数が地域によって異なる"],
     "avgCost": "50〜300万円",
     "coverage": "全国",
-    "officialUrl": "https://rishop.co.jp/"
+    "officialUrl": "https://rehome-navi.com/"
   },
   {
     "name": "ホームプロ",
@@ -57,7 +57,7 @@
     "cons": ["業者の質にばらつきがある場合あり", "外構専門ではないため提案に差あり"],
     "avgCost": "50〜500万円",
     "coverage": "全国",
-    "officialUrl": "https://www.homepro.co.jp/"
+    "officialUrl": "https://www.homepro.jp/"
   },
   {
     "name": "くらしのマーケット",
@@ -93,10 +93,10 @@
     "cons": ["外構専門ではないため専門性が低い場合あり", "業者数が他サービスより少ない"],
     "avgCost": "50〜300万円",
     "coverage": "全国",
-    "officialUrl": "https://www.hikakubiz.net/"
+    "officialUrl": "https://www.biz.ne.jp/"
   },
   {
-    "name": "外構パートナーズ",
+    "name": "外構・エクステリアパートナーズ",
     "slug": "gaiko-partners",
     "tagline": "外構専門の信頼できる業者紹介",
     "description": "外構パートナーズは、外構工事専門の業者紹介サービスです。厳選された外構業者のみに依頼でき、高品質な施工が期待できます。",
@@ -105,7 +105,7 @@
     "cons": ["知名度がやや低い", "登録業者数が他サービスより少ない"],
     "avgCost": "60〜300万円",
     "coverage": "全国",
-    "officialUrl": "https://gaiko-partners.com/"
+    "officialUrl": "https://www.gaikouexterior-partners.jp/"
   },
   {
     "name": "リフォームガイド",
@@ -117,6 +117,6 @@
     "cons": ["業者紹介機能は他サービスに劣る", "外構専門ではない"],
     "avgCost": "50〜400万円",
     "coverage": "全国",
-    "officialUrl": "https://reform-guide.com/"
+    "officialUrl": "https://www.reform-guide.jp/"
   }
 ]

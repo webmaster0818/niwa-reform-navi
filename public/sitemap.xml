@@ -31,6 +31,7 @@
   <url><loc>https://garden-reform-navi.com/scene/barrier-free/</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/terms/</loc><lastmod>2026-04-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://garden-reform-navi.com/privacy/</loc><lastmod>2026-04-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://garden-reform-navi.com/about/</loc><lastmod>2026-09-25</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://garden-reform-navi.com/content-policy/</loc><lastmod>2026-04-27</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://garden-reform-navi.com/review/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://garden-reform-navi.com/review/townlife-exterior/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -43,4 +44,7 @@
   <url><loc>https://garden-reform-navi.com/review/reform-guide/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/review/hikaku-biz/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/review/garden-plus/</loc><lastmod>2026-06-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/area/kanto/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/area/kansai/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/area/tokai/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

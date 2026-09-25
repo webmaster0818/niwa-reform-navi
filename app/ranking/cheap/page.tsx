@@ -4,7 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "外構工事 安い業者ランキング2025 | 庭リフォームナビ",
-  description: "外構工事が安い業者ランキング。費用を抑えて高品質な工事をするためのおすすめ業者を紹介します。",
+  description: "外構工事が安い業者ランキング。費用を抑えて高品質な工事をするためのおすすめ業者を紹介します。",  alternates: { canonical: "/ranking/cheap/" },
 };
 
 // Sort by cheapness (simplified based on avgCost)

@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${company.name}の口コミ・評判・費用 | 庭リフォームナビ`,
     description: `${company.name}の特徴・メリット・デメリット・費用相場を詳しく解説。${company.tagline}`,
+    alternates: { canonical: `/company/${company.slug}/` },
   };
 }
 

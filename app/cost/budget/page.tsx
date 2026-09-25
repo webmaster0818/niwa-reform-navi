@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata = {
   title: "予算別 外構・庭リフォームプランガイド | 庭リフォームナビ",
-  description: "100万円・200万円・300万円など予算別の外構工事プランを紹介。予算に合わせた最適な外構づくりをサポートします。",
+  description: "100万円・200万円・300万円など予算別の外構工事プランを紹介。予算に合わせた最適な外構づくりをサポートします。",  alternates: { canonical: "/cost/budget/" },
 };
 
 const budgetPlans = [

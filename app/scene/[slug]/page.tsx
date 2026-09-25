@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${scene.title}の外構・庭リフォームガイド | 庭リフォームナビ`,
     description: `${scene.title}の外構工事について詳しく解説。費用相場・おすすめ業者・注意点を紹介します。`,
+    alternates: { canonical: `/scene/${scene.slug}/` },
   };
 }
 

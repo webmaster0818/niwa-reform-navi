@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata = {
   title: "記事の制作ポリシー | 庭リフォームナビ",
-  description: "庭リフォームナビの編集方針・記事制作ポリシーです。正確で信頼できる情報提供を目指しています。",
+  description: "庭リフォームナビの編集方針・記事制作ポリシーです。正確で信頼できる情報提供を目指しています。",  alternates: { canonical: "/content-policy/" },
 };
 
 export default function ContentPolicyPage() {

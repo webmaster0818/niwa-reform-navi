@@ -38,6 +38,12 @@ export default function SiteFooter() {
               <li><Link href="/scene/reform/" className="hover:text-white transition-colors">庭リフォーム</Link></li>
               <li><Link href="/scene/barrier-free/" className="hover:text-white transition-colors">バリアフリー</Link></li>
             </ul>
+            <h4 className="font-bold mb-3 mt-6 text-amber-200">エリア別ガイド</h4>
+            <ul className="space-y-2 text-sm text-amber-100">
+              <li><Link href="/area/kanto/" className="hover:text-white transition-colors">関東</Link></li>
+              <li><Link href="/area/kansai/" className="hover:text-white transition-colors">関西</Link></li>
+              <li><Link href="/area/tokai/" className="hover:text-white transition-colors">東海</Link></li>
+            </ul>
           </div>
         </div>
         <div className="border-t border-amber-700 mt-8 pt-6 text-xs text-amber-200">

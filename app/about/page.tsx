@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "運営者情報・サイトについて｜庭リフォームナビ",
   description:
     "庭リフォームナビの運営者情報、運営方針、編集ポリシー、お問い合わせ先を掲載しています。",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about/" },
 };
 
 const SITE_NAME = "庭リフォームナビ";

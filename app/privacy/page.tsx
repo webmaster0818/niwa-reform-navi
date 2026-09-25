@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata = {
   title: "プライバシーポリシー | 庭リフォームナビ",
-  description: "庭リフォームナビのプライバシーポリシーです。個人情報の取り扱いについて説明しています。",
+  description: "庭リフォームナビのプライバシーポリシーです。個人情報の取り扱いについて説明しています。",  alternates: { canonical: "/privacy/" },
 };
 
 export default function PrivacyPage() {

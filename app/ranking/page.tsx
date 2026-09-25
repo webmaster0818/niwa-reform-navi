@@ -4,7 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "外構業者おすすめランキング2025 | 庭リフォームナビ",
-  description: "外構・庭リフォーム業者の総合おすすめランキング。タウンライフエクステリアやガーデンプラスなど全10社を徹底比較します。",
+  description: "外構・庭リフォーム業者の総合おすすめランキング。タウンライフエクステリアやガーデンプラスなど全10社を徹底比較します。",  alternates: { canonical: "/ranking/" },
 };
 
 const medals = ["", "", ""];

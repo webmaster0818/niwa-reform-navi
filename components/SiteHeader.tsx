@@ -18,6 +18,7 @@ export default function SiteHeader() {
           <Link href="/work/wood-deck/" className="text-gray-700 hover:text-primary transition-colors">工事の種類</Link>
           <Link href="/cost/total/" className="text-gray-700 hover:text-primary transition-colors">費用相場</Link>
           <Link href="/scene/new-house/" className="text-gray-700 hover:text-primary transition-colors">シーン別</Link>
+          <Link href="/area/kanto/" className="text-gray-700 hover:text-primary transition-colors">エリア別</Link>
           <Link
             href="/ranking/estimate/"
             className="bg-accent text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition-colors flex items-center gap-1"
@@ -46,6 +47,7 @@ export default function SiteHeader() {
           <Link href="/work/wood-deck/" className="text-gray-700" onClick={() => setMenuOpen(false)}>工事の種類</Link>
           <Link href="/cost/total/" className="text-gray-700" onClick={() => setMenuOpen(false)}>費用相場</Link>
           <Link href="/scene/new-house/" className="text-gray-700" onClick={() => setMenuOpen(false)}>シーン別</Link>
+          <Link href="/area/kanto/" className="text-gray-700" onClick={() => setMenuOpen(false)}>エリア別</Link>
           <Link
             href="/ranking/estimate/"
             className="bg-accent text-white px-4 py-2 rounded-full text-center font-bold"

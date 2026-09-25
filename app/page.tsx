@@ -3,6 +3,10 @@ import Image from "next/image";
 import companies from "@/data/companies.json";
 import works from "@/data/works.json";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 const workIconSrc: Record<string, string> = {
   "wood-deck": "/images/icon-wood-deck.png",
   "carport": "/images/icon-carport.png",
