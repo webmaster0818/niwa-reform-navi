@@ -12,17 +12,21 @@
 
 ## 主要コンテンツ
 
-- トップページ: https://niwa-reform-navi-deploy.pages.dev/
-- プライバシーポリシー: https://niwa-reform-navi-deploy.pages.dev/privacy-policy (または /privacy)
-- 利用規約: https://niwa-reform-navi-deploy.pages.dev/terms (または /terms-of-service)
-- サイトマップ: https://niwa-reform-navi-deploy.pages.dev/sitemap.xml
+- トップページ: https://garden-reform-navi.com/
+- プライバシーポリシー: https://garden-reform-navi.com/privacy/
+- 利用規約: https://garden-reform-navi.com/terms/
+- 記事の制作ポリシー: https://garden-reform-navi.com/content-policy/
+- 法令・手続きガイド: https://garden-reform-navi.com/rule/
+- エリア別ガイド: https://garden-reform-navi.com/area/kanto/ ほか11地方
+- 業者の口コミ・評判: https://garden-reform-navi.com/review/
+- サイトマップ: https://garden-reform-navi.com/sitemap.xml
 
 ## クローラー向けポリシー
 
 - AI クローラー (GPTBot / ClaudeBot / PerplexityBot / Google-Extended 等) のアクセスを許可しています
-- 詳細は https://niwa-reform-navi-deploy.pages.dev/robots.txt を参照してください
+- 詳細は https://garden-reform-navi.com/robots.txt を参照してください
 - 引用時は本ドメインへのリンクを残していただくようお願いします
 
 ## 最終更新
 
-2026-05-21
+2026-09-30

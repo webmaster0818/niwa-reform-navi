@@ -1,5 +1,6 @@
 import Link from "next/link";
 import areas from "@/data/areas.json";
+import rules from "@/data/rules.json";
 
 export default function SiteFooter() {
   return (
@@ -28,6 +29,17 @@ export default function SiteFooter() {
               <li><Link href="/work/fence/" className="hover:text-white transition-colors">フェンス・塀</Link></li>
               <li><Link href="/work/concrete/" className="hover:text-white transition-colors">コンクリート舗装</Link></li>
               <li><Link href="/work/garden-room/" className="hover:text-white transition-colors">ガーデンルーム</Link></li>
+            </ul>
+            <h4 className="font-bold mb-3 mt-6 text-amber-200">法令・手続きガイド</h4>
+            <ul className="space-y-2 text-sm text-amber-100">
+              <li><Link href="/rule/" className="hover:text-white transition-colors">ガイド一覧</Link></li>
+              {rules.map((r) => (
+                <li key={r.slug}>
+                  <Link href={`/rule/${r.slug}/`} className="hover:text-white transition-colors">
+                    {r.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
