@@ -16,7 +16,7 @@
 - プライバシーポリシー: https://garden-reform-navi.com/privacy/
 - 利用規約: https://garden-reform-navi.com/terms/
 - 記事の制作ポリシー: https://garden-reform-navi.com/content-policy/
-- 法令・手続きガイド: https://garden-reform-navi.com/rule/
+- 法令・手続きガイド: https://garden-reform-navi.com/rule/ （塀・建物／隣地・境界／道路／契約・業者・資格の14テーマ。条文を引用）
 - エリア別ガイド: https://garden-reform-navi.com/area/kanto/ ほか11地方
 - 業者の口コミ・評判: https://garden-reform-navi.com/review/
 - サイトマップ: https://garden-reform-navi.com/sitemap.xml
@@ -29,4 +29,4 @@
 
 ## 最終更新
 
-2026-09-30
+2026-10-12

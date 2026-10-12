@@ -6,7 +6,6 @@ import rules from "@/data/rules.json";
 import works from "@/data/works.json";
 
 const SITE = "https://garden-reform-navi.com";
-const UPDATED = "2026-09-30";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -33,7 +32,10 @@ export default async function RulePage({ params }: Props) {
   if (!rule) notFound();
 
   const url = `${SITE}/rule/${rule.slug}/`;
-  const others = rules.filter((r) => r.slug !== rule.slug);
+  const UPDATED = rule.updated;
+  const refs: { name: string; url: string }[] = "refs" in rule && Array.isArray(rule.refs) ? rule.refs : [];
+  const sameGroup = rules.filter((r) => r.slug !== rule.slug && r.group === rule.group);
+  const otherGroups = rules.filter((r) => r.group !== rule.group);
   const related = rule.relatedWorks
     .map((w) => works.find((x) => x.slug === w))
     .filter((w): w is (typeof works)[number] => Boolean(w));
@@ -102,7 +104,7 @@ export default async function RulePage({ params }: Props) {
             条文に書かれていることと、個別の敷地・計画についての判断は別です。当サイトは個別の案件について適法・違法の判定を行っていません。
           </li>
           <li>
-            手続きの様式・手数料・期間は自治体や道路管理者ごとに異なるため、このページには金額や日数を記載していません。
+            自治体や道路管理者ごとに異なる手続きの様式・手数料・処理期間は、このページには記載していません（条文自体に書かれている数値のみ扱っています）。
           </li>
         </ul>
       </div>
@@ -271,6 +273,13 @@ export default async function RulePage({ params }: Props) {
               </a>
             </li>
           ))}
+          {refs.map((r) => (
+            <li key={r.url}>
+              <a href={r.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                {r.name}
+              </a>
+            </li>
+          ))}
         </ul>
         <p className="text-xs text-gray-500 mt-4 leading-relaxed">
           条文は{UPDATED}時点でe-Gov法令検索に掲載されていた内容を確認して転記しています。法令は改正されることがあるため、実際の手続きの前には最新の条文と、所管する窓口の案内をご確認ください。
@@ -279,19 +288,38 @@ export default async function RulePage({ params }: Props) {
 
       {/* Other rules */}
       <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">ほかの法令・手続きを見る</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {others.map((r) => (
-            <Link
-              key={r.slug}
-              href={`/rule/${r.slug}/`}
-              className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors"
-            >
-              <div className="font-bold text-gray-800 mb-1">{r.name}</div>
-              <div className="text-xs text-gray-500 leading-relaxed line-clamp-2">{r.laws[0].name} {r.laws[0].article}</div>
-            </Link>
+        {sameGroup.length > 0 && (
+          <>
+            <h2 className="text-lg font-bold mb-4 text-gray-800">同じ分野（{rule.group}）のガイド</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              {sameGroup.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/rule/${r.slug}/`}
+                  className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors"
+                >
+                  <div className="font-bold text-gray-800 mb-1">{r.name}</div>
+                  <div className="text-xs text-gray-500 leading-relaxed line-clamp-2">{r.laws[0].name} {r.laws[0].article}</div>
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
+        <h2 className="text-base font-bold mb-3 text-gray-800">ほかの法令・手続きを見る</h2>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          {otherGroups.map((r) => (
+            <li key={r.slug}>
+              <Link href={`/rule/${r.slug}/`} className="inline-block bg-bg rounded-full px-3 py-1.5 text-gray-700 hover:bg-emerald-100 transition-colors">
+                {r.name}
+              </Link>
+            </li>
           ))}
-        </div>
+          <li>
+            <Link href="/rule/" className="inline-block rounded-full px-3 py-1.5 text-primary font-bold hover:underline">
+              ガイド一覧へ
+            </Link>
+          </li>
+        </ul>
       </section>
 
       {/* CTA */}

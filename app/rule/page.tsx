@@ -4,12 +4,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 import rules from "@/data/rules.json";
 
 const SITE = "https://garden-reform-navi.com";
-const UPDATED = "2026-09-30";
+const UPDATED = "2026-10-12";
+const GROUPS = ["塀・建物・工作物", "隣地・境界", "道路", "契約・業者・資格"];
 
 const url = `${SITE}/rule/`;
-const title = "外構・庭リフォームの法令・手続きガイド｜条文で確認する6つの論点 | 庭リフォームナビ";
+const title = `外構・庭リフォームの法令・手続きガイド｜条文で確認する${rules.length}の論点 | 庭リフォームナビ`;
 const description =
-  "ブロック塀の基準、建築確認の要否、建ぺい率と建築面積、隣地境界の距離と目隠し、越境した枝と根、歩道の切り下げ。外構・庭リフォームで前提になる決まりを、建築基準法・同施行令・民法・道路法の条文を引用して整理しました。";
+  "ブロック塀の基準、建築確認、建ぺい率、隣地境界の距離、越境した枝、隣地の使用、境界の塀の費用、雨水と排水、池や溝の距離、歩道の切り下げ、狭い道に面した門・塀、建設業許可と契約書、訪問販売のクーリング・オフ、屋外の電気工事。外構・庭リフォームの前提になる決まりを、法令の条文を引用して整理しました。";
 
 export const metadata: Metadata = {
   title,
@@ -52,7 +53,7 @@ export default function RuleIndexPage() {
           外構・庭リフォームの法令・手続きガイド
         </h1>
         <p className="text-gray-600 leading-relaxed">
-          外構や庭の工事では、費用やデザインを決める前に、そもそもどこまでできるのかという前提があります。塀の高さ、確認申請の要否、建ぺい率、隣地との距離、越境した枝、道路にかかる工事。いずれも法令に数値や手順が書かれています。ここでは、その条文を引用したうえで、どこまでが条文に書いてあることで、どこからが個別の判断なのかを分けて整理しました。
+          外構や庭の工事では、費用やデザインを決める前に、そもそもどこまでできるのかという前提があります。塀の高さ、確認申請の要否、隣地との距離や費用の分け方、雨水の行き先、道路にかかる工事、そして業者との契約や資格。いずれも法令に数値や手順が書かれています。ここでは、その条文を引用したうえで、どこまでが条文に書いてあることで、どこからが個別の判断なのかを分けて整理しました。
         </p>
         <p className="text-xs text-gray-400 mt-4">最終更新日：{UPDATED}</p>
       </div>
@@ -66,26 +67,46 @@ export default function RuleIndexPage() {
         </ul>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 mb-6">
-        {rules.map((r) => (
-          <Link
-            key={r.slug}
-            href={`/rule/${r.slug}/`}
-            className="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:border-emerald-300 transition-colors"
-          >
-            <div className="flex flex-wrap gap-2 mb-2">
-              {Array.from(new Set(r.laws.map((l) => l.name))).map((n) => (
-                <span key={n} className="bg-bg text-primary text-xs px-3 py-1 rounded-full border border-emerald-200">
-                  {n}
-                </span>
+      <nav aria-label="分野" className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 mb-6">
+        <h2 className="text-sm font-bold text-gray-800 mb-3">分野から探す</h2>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          {GROUPS.map((g, gi) => (
+            <li key={g}>
+              <a href={`#g${gi + 1}`} className="inline-block bg-bg rounded-full px-3 py-1.5 text-gray-700 hover:bg-emerald-100 transition-colors">
+                {g}（{rules.filter((r) => r.group === g).length}）
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {GROUPS.map((g, gi) => (
+        <section key={g} id={`g${gi + 1}`} className="mb-8 scroll-mt-4">
+          <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4 border-l-4 border-primary pl-3">{g}</h2>
+          <div className="grid grid-cols-1 gap-4">
+            {rules
+              .filter((r) => r.group === g)
+              .map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/rule/${r.slug}/`}
+                  className="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:border-emerald-300 transition-colors"
+                >
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {Array.from(new Set(r.laws.map((l) => l.name))).map((n) => (
+                      <span key={n} className="bg-bg text-primary text-xs px-3 py-1 rounded-full border border-emerald-200">
+                        {n}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 leading-snug">{r.h1}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{r.lead}</p>
+                  <span className="inline-block mt-3 text-sm text-primary font-bold">条文を読む →</span>
+                </Link>
               ))}
-            </div>
-            <h2 className="text-base md:text-lg font-bold text-gray-900 mb-2 leading-snug">{r.h1}</h2>
-            <p className="text-sm text-gray-600 leading-relaxed">{r.lead}</p>
-            <span className="inline-block mt-3 text-sm text-primary font-bold">条文を読む →</span>
-          </Link>
-        ))}
-      </div>
+          </div>
+        </section>
+      ))}
 
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center">
         <h2 className="text-xl font-bold mb-2">手続きの扱いは、業者によって工程が変わります</h2>
