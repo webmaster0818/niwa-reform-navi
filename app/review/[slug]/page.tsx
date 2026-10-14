@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import reviewsData from "@/data/reviews.json";
 import Breadcrumb from "@/components/Breadcrumb";
+import { OG_IMAGE } from "@/lib/og";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: r.title,
     description: r.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: r.title, description: r.metaDescription, url, type: "article" },
+    openGraph: { title: r.title, description: r.metaDescription, url, type: "article", images: [OG_IMAGE] },
   };
 }
 

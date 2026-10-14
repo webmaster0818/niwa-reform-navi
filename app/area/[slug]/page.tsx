@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import areas from "@/data/areas.json";
 import companies from "@/data/companies.json";
 import reviews from "@/data/reviews.json";
+import { OG_IMAGE } from "@/lib/og";
 
 const SITE = "https://garden-reform-navi.com";
 
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "article" },
+    openGraph: { title, description, url, type: "article", images: [OG_IMAGE] },
   };
 }
 

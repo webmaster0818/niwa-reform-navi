@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { OG_IMAGE } from "@/lib/og";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -13,8 +14,15 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://garden-reform-navi.com"),
+  openGraph: {
+    siteName: "庭リフォームナビ",
+    locale: "ja_JP",
+    type: "website",
+    images: [OG_IMAGE],
+  },
   twitter: {
     card: "summary_large_image",
+    images: [OG_IMAGE.url],
   },
   title: "庭リフォームナビ | 外構・庭工事の比較・見積もりサイト",
   description: "庭リフォームの費用・業者比較・見積もりならお任せ。ウッドデッキ、カーポート、フェンス、コンクリートなど外構工事の専門比較サイトです。",

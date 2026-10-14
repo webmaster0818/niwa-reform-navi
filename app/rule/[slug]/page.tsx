@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import rules from "@/data/rules.json";
 import works from "@/data/works.json";
+import { OG_IMAGE } from "@/lib/og";
 
 const SITE = "https://garden-reform-navi.com";
 
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: rule.metaTitle,
     description: rule.metaDescription,
     alternates: { canonical: url },
-    openGraph: { title: rule.metaTitle, description: rule.metaDescription, url, type: "article" },
+    openGraph: { title: rule.metaTitle, description: rule.metaDescription, url, type: "article", images: [OG_IMAGE] },
   };
 }
 

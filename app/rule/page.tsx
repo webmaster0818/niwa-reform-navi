@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import rules from "@/data/rules.json";
+import { OG_IMAGE } from "@/lib/og";
 
 const SITE = "https://garden-reform-navi.com";
 const UPDATED = "2026-10-12";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: url },
-  openGraph: { title, description, url, type: "website" },
+  openGraph: { title, description, url, type: "website", images: [OG_IMAGE] },
 };
 
 export default function RuleIndexPage() {

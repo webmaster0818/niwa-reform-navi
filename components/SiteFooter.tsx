@@ -50,6 +50,8 @@ export default function SiteFooter() {
               <li><Link href="/scene/new-house/" className="hover:text-white transition-colors">新築外構</Link></li>
               <li><Link href="/scene/reform/" className="hover:text-white transition-colors">庭リフォーム</Link></li>
               <li><Link href="/scene/barrier-free/" className="hover:text-white transition-colors">バリアフリー</Link></li>
+              <li><Link href="/scene/diy/" className="hover:text-white transition-colors">DIY×プロ組み合わせ</Link></li>
+              <li><Link href="/scene/narrow/" className="hover:text-white transition-colors">狭小・変形地の庭</Link></li>
             </ul>
             <h4 className="font-bold mb-3 mt-6 text-amber-200">エリア別ガイド</h4>
             <ul className="flex flex-wrap gap-x-3 gap-y-2 text-sm text-amber-100">
@@ -66,6 +68,7 @@ export default function SiteFooter() {
         <div className="border-t border-amber-700 mt-8 pt-6 text-xs text-amber-200">
           <p className="text-center mb-3">※当サイトは情報提供を目的としています。各サービスの詳細は公式サイトをご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4 mb-3">
+            <Link href="/about/" className="hover:text-white transition-colors">運営者情報</Link>
             <Link href="/terms/" className="hover:text-white transition-colors">利用規約</Link>
             <Link href="/privacy/" className="hover:text-white transition-colors">プライバシーポリシー</Link>
             <Link href="/content-policy/" className="hover:text-white transition-colors">記事の制作ポリシー</Link>
