@@ -40,7 +40,7 @@ export default function RootLayout({
         <main className="flex-1">{children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"庭リフォームナビ\",\"url\":\"https://niwa-reform-navi-deploy.pages.dev/\",\"logo\":\"https://niwa-reform-navi-deploy.pages.dev/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://niwa-reform-navi-deploy.pages.dev/about/\"]}" }}
+          dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"庭リフォームナビ\",\"url\":\"https://garden-reform-navi.com/\",\"logo\":\"https://garden-reform-navi.com/favicon.ico\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"株式会社MediaX\",\"url\":\"https://mediax.biz\"},\"sameAs\":[\"https://garden-reform-navi.com/about/\"]}" }}
         />
         </main>
         <SiteFooter />
