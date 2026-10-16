@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!company) return {};
   return {
     title: `${company.name}の口コミ・評判・費用 | 庭リフォームナビ`,
-    description: `${company.name}の特徴・メリット・デメリット・費用相場を詳しく解説。${company.tagline}`,
+    description: `${company.name}の特徴・メリット・デメリット・費用相場を解説しています。${company.tagline}。`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -59,7 +59,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         </div>
         <div className="col-span-2 md:col-span-1 bg-accent text-white rounded-xl p-4 text-center">
           <div className="text-xs text-blue-100 mb-1">無料見積もり</div>
-          <div className="font-bold">今すぐ依頼</div>
+          <div className="font-bold">公式サイトで依頼</div>
         </div>
       </div>
 
@@ -104,8 +104,8 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center mb-6">
-        <h2 className="text-xl font-bold mb-2">{company.name}で無料見積もり</h2>
-        <p className="text-blue-100 mb-4 text-sm">費用0円で複数業者から見積もりを比較できます</p>
+        <h2 className="text-xl font-bold mb-2">{company.name}の無料見積もり</h2>
+        <p className="text-blue-100 mb-4 text-sm">無料で複数の業者から見積もりを取得し、比較できます</p>
         <a
           href={company.officialUrl}
           target="_blank"
@@ -113,13 +113,13 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
           className="bg-white text-accent px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block"
         >
           <span className="text-xs bg-accent text-white px-1.5 py-0.5 rounded font-bold mr-2">PR</span>
-          公式サイトで無料見積もり →
+          公式サイトで無料見積もりを依頼する →
         </a>
       </div>
 
       {/* Other Companies */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">他の業者と比較する</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-800">他の業者との比較</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {companies.filter((c) => c.slug !== slug).slice(0, 6).map((c) => (
             <Link

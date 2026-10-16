@@ -4,7 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "外構業者おすすめランキング2025 | 庭リフォームナビ",
-  description: "外構・庭リフォーム業者の総合おすすめランキング。タウンライフエクステリアやガーデンプラスなど全10社を徹底比較します。",  alternates: { canonical: "/ranking/" },
+  description: "外構・庭リフォーム業者の総合おすすめランキング。タウンライフエクステリアやガーデンプラスなど全10社を比較しています。",  alternates: { canonical: "/ranking/" },
 };
 
 const medals = ["", "", ""];
@@ -19,17 +19,17 @@ export default function RankingPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
           外構業者おすすめランキング2025
         </h1>
-        <p className="text-gray-600">編集部が厳選したおすすめ外構業者10社を総合評価で順位付け</p>
+        <p className="text-gray-600">編集部が厳選した外構業者10社を、総合評価に基づき順位を付けています</p>
       </div>
 
       {/* Sub Rankings */}
       <div className="flex gap-3 justify-center mb-8 flex-wrap">
         <Link href="/ranking/cheap/" className="bg-bg border border-primary text-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-colors">
-           安さランキング
+           価格重視のランキング
         </Link>
         <Link href="/ranking/estimate/" className="bg-accent text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition-colors">
           <span className="text-xs bg-white text-accent px-1 py-0.5 rounded font-bold mr-1">PR</span>
-          見積もりおすすめ
+          おすすめの見積もりサービス
         </Link>
       </div>
 
@@ -85,13 +85,13 @@ export default function RankingPage() {
 
       {/* Bottom CTA */}
       <div className="mt-10 bg-gradient-to-r from-primary to-emerald-600 rounded-2xl p-8 text-white text-center">
-        <h2 className="text-xl font-bold mb-2">複数業者に一括で見積もり依頼</h2>
-        <p className="text-emerald-100 mb-4">比較することで最大30%のコスト削減に成功した例も</p>
+        <h2 className="text-xl font-bold mb-2">複数の業者への一括見積もり依頼</h2>
+        <p className="text-emerald-100 mb-4">複数社を比較することで、費用を最大30%削減できた例もあります</p>
         <Link
           href="/ranking/estimate/"
           className="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-colors inline-block"
         >
-          無料一括見積もりを始める
+          無料で一括見積もりを依頼する
         </Link>
       </div>
     </div>

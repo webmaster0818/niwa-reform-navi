@@ -20,20 +20,20 @@ const workIconSrc: Record<string, string> = {
 
 const faqData = [
   {
-    q: "庭・外構リフォームの費用相場はいくらですか？",
-    a: "工事の種類や規模によって異なりますが、一般的な外構工事全般では100〜300万円が相場です。ウッドデッキや植栽のみなら30〜80万円、フルリフォームでは300万円以上になる場合もあります。",
+    q: "庭・外構リフォームの費用相場はどのくらいですか？",
+    a: "工事の種類や規模によって異なりますが、外構工事全般では一般的に100〜300万円が相場です。ウッドデッキや植栽のみであれば30〜80万円、全面的な改修では300万円以上となる場合もあります。",
   },
   {
-    q: "外構業者はどうやって選べばいいですか？",
-    a: "一括見積もりサービスを使って複数の業者から見積もりを取り、価格・プラン・実績・口コミを比較するのがおすすめです。最低3社から見積もりを取ることで相場感がわかります。",
+    q: "外構業者はどのように選べばよいですか？",
+    a: "一括見積もりサービスを利用して複数の業者から見積もりを取得し、価格・プラン・実績・口コミを比較することをおすすめします。3社以上から見積もりを取得すると、相場を把握しやすくなります。",
   },
   {
     q: "見積もりは無料ですか？",
-    a: "タウンライフエクステリア・ガーデンプラスなど、当サイトで紹介している一括見積もりサービスはすべて無料です。費用は一切かかりません。",
+    a: "タウンライフエクステリア・ガーデンプラスなど、当サイトで紹介している一括見積もりサービスはいずれも無料で利用できます。見積もりの依頼に費用はかかりません。",
   },
   {
     q: "工事期間はどのくらいかかりますか？",
-    a: "工事の種類によって異なります。カーポートや門扉なら1〜3日、ウッドデッキや舗装工事は3〜7日、大規模なリフォームでは2〜4週間かかる場合があります。",
+    a: "工事の種類によって異なります。カーポートや門扉であれば1〜3日、ウッドデッキや舗装工事は3〜7日、大規模な改修では2〜4週間かかる場合があります。",
   },
 ];
 
@@ -67,13 +67,13 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-20 text-center text-white">
           <div className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
-            外構・庭リフォーム専門ガイド
+            外構・庭リフォームの比較ガイド
           </div>
           <h1 className="text-4xl md:text-6xl font-black mb-5 leading-tight tracking-tight drop-shadow-lg">
-            理想の庭が見つかる。
+            外構・庭リフォームの業者比較
           </h1>
           <p className="text-lg md:text-xl mb-10 text-emerald-50 max-w-2xl mx-auto leading-relaxed drop-shadow">
-            外構・庭リフォームの費用相場・業者比較・見積もりならお任せ
+            外構・庭リフォームの費用相場、業者の比較、見積もりの取り方をまとめています
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           {/* Trust badges */}
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-emerald-100">
-            <span className="flex items-center gap-1.5"> 完全無料</span>
+            <span className="flex items-center gap-1.5"> 無料</span>
             <span className="flex items-center gap-1.5"> 最大5社比較</span>
             <span className="flex items-center gap-1.5"> しつこい営業なし</span>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             工事の種類から探す
           </h2>
-          <p className="text-sm text-gray-500">気になる工事を選んで費用相場・施工例をチェック</p>
+          <p className="text-sm text-gray-500">工事の種類ごとに費用相場と施工例を掲載しています</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {works.map((work) => (
@@ -137,7 +137,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
               おすすめ外構業者 TOP3
             </h2>
-            <p className="text-sm text-gray-500">編集部が厳選した信頼できる業者を紹介します</p>
+            <p className="text-sm text-gray-500">編集部が厳選した業者を紹介しています</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {top3.map((company, i) => (
@@ -210,9 +210,9 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 py-14">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-            工事別 費用相場早見表
+            工事別の費用相場一覧
           </h2>
-          <p className="text-sm text-gray-500">工事の種類・規模別の目安費用と工期をまとめました</p>
+          <p className="text-sm text-gray-500">工事の種類・規模別の費用と工期の目安をまとめています</p>
         </div>
         <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-100">
           <table className="w-full bg-white">
@@ -265,7 +265,7 @@ export default function Home() {
         </div>
         <div className="text-center mt-6">
           <Link href="/cost/total/" className="text-primary font-bold hover:underline text-sm">
-            詳しい費用相場を見る →
+            費用相場の詳細を見る →
           </Link>
         </div>
       </section>
@@ -275,18 +275,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-              シーン別で探す
+              シーン別に探す
             </h2>
-            <p className="text-sm text-gray-500">あなたの状況・目的に合ったリフォームプランを探す</p>
+            <p className="text-sm text-gray-500">目的や敷地の条件に応じたリフォームの情報を掲載しています</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { href: "/scene/new-house/", label: "新築外構", desc: "建物に合った外構をゼロから計画", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>, color: "from-emerald-50 to-emerald-100" },
-              { href: "/scene/reform/", label: "庭リフォーム", desc: "既存の庭を一新したい", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>, color: "from-amber-50 to-amber-100" },
+              { href: "/scene/new-house/", label: "新築外構", desc: "建物に合わせた外構の計画", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>, color: "from-emerald-50 to-emerald-100" },
+              { href: "/scene/reform/", label: "庭リフォーム", desc: "既存の庭を改修したい場合", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>, color: "from-amber-50 to-amber-100" },
               { href: "/scene/barrier-free/", label: "バリアフリー", desc: "安全で使いやすい庭づくり", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="5" r="2"/><path strokeLinecap="round" strokeLinejoin="round" d="M12 7v6m-4 4h8M8 17l-2 4m10-4l2 4"/></svg>, color: "from-blue-50 to-blue-100" },
-              { href: "/scene/diy/", label: "DIY×プロ", desc: "費用を抑えて理想の庭へ", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>, color: "from-purple-50 to-purple-100" },
-              { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースを最大活用", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><polygon points="12 2 2 22 22 22"/></svg>, color: "from-rose-50 to-rose-100" },
-              { href: "/cost/budget/", label: "予算別プラン", desc: "予算に合わせたプランを提案", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><line x1="12" y1="1" x2="12" y2="23"/><path strokeLinecap="round" d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>, color: "from-yellow-50 to-yellow-100" },
+              { href: "/scene/diy/", label: "DIYと業者工事", desc: "費用を抑えた庭づくり", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>, color: "from-purple-50 to-purple-100" },
+              { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースの活用", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><polygon points="12 2 2 22 22 22"/></svg>, color: "from-rose-50 to-rose-100" },
+              { href: "/cost/budget/", label: "予算別プラン", desc: "予算ごとの工事プラン", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><line x1="12" y1="1" x2="12" y2="23"/><path strokeLinecap="round" d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>, color: "from-yellow-50 to-yellow-100" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -315,7 +315,7 @@ export default function Home() {
       <section className="max-w-3xl mx-auto px-4 py-14">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">よくある質問</h2>
-          <p className="text-sm text-gray-500">外構・庭リフォームに関するよくあるご質問をまとめました</p>
+          <p className="text-sm text-gray-500">外構・庭リフォームに関するよくある質問をまとめています</p>
         </div>
         <div className="space-y-3">
           {faqData.map((item, i) => (
@@ -349,9 +349,9 @@ export default function Home() {
           <div className="absolute -bottom-20 -right-10 w-80 h-80 bg-white rounded-full" />
         </div>
         <div className="relative max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-3">まずは無料見積もりから</h2>
+          <h2 className="text-2xl md:text-3xl font-black mb-3">無料見積もりのご案内</h2>
           <p className="text-blue-100 mb-8 text-base leading-relaxed">
-            最大5社から一括見積もり。費用を比較して最安値を見つけましょう。
+            最大5社から一括で見積もりを取得し、費用を比較できます。
           </p>
           <Link
             href="/ranking/estimate/"
@@ -361,9 +361,9 @@ export default function Home() {
             無料見積もりを依頼する
           </Link>
           <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-blue-200">
-            <span> 完全無料・登録不要</span>
+            <span> 無料・登録不要</span>
             <span> 最大5社比較</span>
-            <span> 断るのも自由</span>
+            <span> 見積もり後の辞退も可能</span>
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function SiteFooter() {
             <ul className="space-y-2 text-sm text-amber-100">
               <li><Link href="/ranking/" className="hover:text-white transition-colors">総合ランキング</Link></li>
               <li><Link href="/ranking/cheap/" className="hover:text-white transition-colors">安い業者ランキング</Link></li>
-              <li><Link href="/ranking/estimate/" className="hover:text-white transition-colors">見積もりおすすめ</Link></li>
+              <li><Link href="/ranking/estimate/" className="hover:text-white transition-colors">おすすめの見積もりサービス</Link></li>
             </ul>
           </div>
           <div>
@@ -50,7 +50,7 @@ export default function SiteFooter() {
               <li><Link href="/scene/new-house/" className="hover:text-white transition-colors">新築外構</Link></li>
               <li><Link href="/scene/reform/" className="hover:text-white transition-colors">庭リフォーム</Link></li>
               <li><Link href="/scene/barrier-free/" className="hover:text-white transition-colors">バリアフリー</Link></li>
-              <li><Link href="/scene/diy/" className="hover:text-white transition-colors">DIY×プロ組み合わせ</Link></li>
+              <li><Link href="/scene/diy/" className="hover:text-white transition-colors">DIYと業者工事の併用</Link></li>
               <li><Link href="/scene/narrow/" className="hover:text-white transition-colors">狭小・変形地の庭</Link></li>
             </ul>
             <h4 className="font-bold mb-3 mt-6 text-amber-200">エリア別ガイド</h4>
@@ -66,7 +66,7 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="border-t border-amber-700 mt-8 pt-6 text-xs text-amber-200">
-          <p className="text-center mb-3">※当サイトは情報提供を目的としています。各サービスの詳細は公式サイトをご確認ください。</p>
+          <p className="text-center mb-3">※当サイトは情報提供を目的としています。ご利用前に、各サービスの公式サイトにて最新情報をご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4 mb-3">
             <Link href="/about/" className="hover:text-white transition-colors">運営者情報</Link>
             <Link href="/terms/" className="hover:text-white transition-colors">利用規約</Link>

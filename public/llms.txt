@@ -1,6 +1,6 @@
 # 庭リフォームナビ
 
-> 庭リフォームナビ は、株式会社MediaXが運営する比較・情報サイトです。利用者が信頼できる情報をもとに最適な選択ができるよう、独自調査・データに基づくコンテンツを公開しています。
+> 庭リフォームナビ は、株式会社MediaXが運営する比較・情報サイトです。利用者が信頼できる情報をもとに適切な選択ができるよう、独自調査と公式情報に基づくコンテンツを公開しています。
 
 ## サイトポリシー
 
@@ -17,7 +17,7 @@
 - 利用規約: https://garden-reform-navi.com/terms/
 - 記事の制作ポリシー: https://garden-reform-navi.com/content-policy/
 - 法令・手続きガイド: https://garden-reform-navi.com/rule/ （塀・建物／隣地・境界／道路／契約・業者・資格の14テーマ。条文を引用）
-- エリア別ガイド: https://garden-reform-navi.com/area/kanto/ ほか11地方
+- エリア別ガイド: https://garden-reform-navi.com/area/kanto/ ほか10地方
 - 業者の口コミ・評判: https://garden-reform-navi.com/review/
 - サイトマップ: https://garden-reform-navi.com/sitemap.xml
 
@@ -25,8 +25,8 @@
 
 - AI クローラー (GPTBot / ClaudeBot / PerplexityBot / Google-Extended 等) のアクセスを許可しています
 - 詳細は https://garden-reform-navi.com/robots.txt を参照してください
-- 引用時は本ドメインへのリンクを残していただくようお願いします
+- 引用の際は、本ドメインへのリンクを記載してください
 
 ## 最終更新
 
-2026-10-12
+2026-10-16

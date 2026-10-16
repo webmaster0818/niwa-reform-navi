@@ -25,7 +25,7 @@ export default function AboutPage() {
         <section className="mb-10 prose prose-gray max-w-none text-sm leading-relaxed space-y-4">
           <h2 className="text-xl font-bold mt-2 mb-3">{SITE_NAME} について</h2>
           <p>
-            {SITE_NAME} は、株式会社MediaXが運営する比較・情報サイトです。利用者が業者選び・サービス選定で失敗しないよう、独自調査・公式情報・業界データに基づく信頼できるコンテンツを提供することを目的としています。
+            {SITE_NAME} は、株式会社MediaXが運営する比較・情報サイトです。利用者が業者やサービスを適切に選定できるよう、独自調査・公式情報・業界データに基づく信頼できるコンテンツを提供することを目的としています。
           </p>
           <p>
             当サイトのコンテンツは、最新の業界動向・公式発表・公的データを参照し、編集部による事実確認(ファクトチェック)を経て公開しています。執筆プロセスにAIツールを活用する場合がありますが、すべての記事は人間の編集者による監督・編集を経た上で公開されます。
@@ -64,7 +64,7 @@ export default function AboutPage() {
         <section className="mb-10 prose prose-gray max-w-none text-sm leading-relaxed space-y-4">
           <h2 className="text-xl font-bold mt-2 mb-3">AI利用方針</h2>
           <p>
-            当サイトでは、編集効率化のためにAIツール（大規模言語モデル等）を活用する場合があります。ただし、すべてのAI生成コンテンツは人間の編集者による事実確認・編集・改善を経た上で公開されています。Googleの「Scaled Content Abuse」ポリシーに準拠し、ユーザーに価値を提供しない大量生成コンテンツの公開は行いません。
+            当サイトでは、編集効率化のためにAIツール（大規模言語モデル等）を活用する場合があります。ただし、すべてのAI生成コンテンツは人間の編集者による事実確認・編集・改善を経た上で公開されています。Googleの「Scaled Content Abuse」ポリシーに準拠し、利用者に価値を提供しない大量生成コンテンツの公開は行いません。
           </p>
         </section>
 

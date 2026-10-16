@@ -42,7 +42,7 @@ export default async function RulePage({ params }: Props) {
     .filter((w): w is (typeof works)[number] => Boolean(w));
 
   const toc = [
-    { id: "laws", label: "根拠になる条文" },
+    { id: "laws", label: "根拠となる条文" },
     { id: "table", label: rule.tableHeading },
     ...rule.sections.map((s, i) => ({ id: `s${i + 1}`, label: s.heading })),
     { id: "checklist", label: rule.checklistHeading },
@@ -96,16 +96,16 @@ export default async function RulePage({ params }: Props) {
 
       {/* Editorial note */}
       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
-        <h2 className="text-base font-bold text-amber-900 mb-2">このページの読み方</h2>
+        <h2 className="text-base font-bold text-amber-900 mb-2">本ページの見方</h2>
         <ul className="space-y-1.5 text-sm text-amber-900/90 leading-relaxed">
           <li>
-            引用している条文は、e-Gov法令検索で公開されている現行の条文をそのまま転記したものです。読みやすさのため中略した箇所は「（中略）」と示しています。
+            引用している条文は、e-Gov法令検索で公開されている現行の条文をそのまま転記したものです。読みやすさを考慮して省略した箇所は「（中略）」と表記しています。
           </li>
           <li>
-            条文に書かれていることと、個別の敷地・計画についての判断は別です。当サイトは個別の案件について適法・違法の判定を行っていません。
+            条文に定められている事項と、個別の敷地・計画についての判断は異なります。当サイトは個別の案件について適法・違法の判定を行っていません。
           </li>
           <li>
-            自治体や道路管理者ごとに異なる手続きの様式・手数料・処理期間は、このページには記載していません（条文自体に書かれている数値のみ扱っています）。
+            自治体や道路管理者ごとに異なる手続きの様式・手数料・処理期間は、本ページには記載していません（条文に定められている数値のみを扱っています）。
           </li>
         </ul>
       </div>
@@ -127,7 +127,7 @@ export default async function RulePage({ params }: Props) {
 
       {/* Laws */}
       <section id="laws" className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6 scroll-mt-4">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">根拠になる条文</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-800">根拠となる条文</h2>
         <div className="space-y-4">
           {rule.laws.map((l, i) => (
             <figure key={i} className="border-l-4 border-primary bg-bg rounded-r-xl p-4 m-0">
@@ -306,7 +306,7 @@ export default async function RulePage({ params }: Props) {
             </div>
           </>
         )}
-        <h2 className="text-base font-bold mb-3 text-gray-800">ほかの法令・手続きを見る</h2>
+        <h2 className="text-base font-bold mb-3 text-gray-800">他の法令・手続き</h2>
         <ul className="flex flex-wrap gap-2 text-sm">
           {otherGroups.map((r) => (
             <li key={r.slug}>
@@ -325,9 +325,9 @@ export default async function RulePage({ params }: Props) {
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center">
-        <h2 className="text-xl font-bold mb-2">手続きの要否は、見積もりの段階で確認しておく</h2>
+        <h2 className="text-xl font-bold mb-2">手続きの要否は、見積もりの段階で確認する</h2>
         <p className="text-blue-100 mb-4 text-sm">
-          複数の業者に同じ条件で相談すると、申請の扱いや工程の違いが比べられます
+          複数の業者に同じ条件で相談すると、申請の扱いや工程の違いを比較できます
         </p>
         <Link
           href="/ranking/estimate/"

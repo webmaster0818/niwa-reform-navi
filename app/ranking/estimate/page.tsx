@@ -4,7 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "外構工事 一括見積もりおすすめサービス2025 | 庭リフォームナビ",
-  description: "外構工事の一括見積もりにおすすめのサービスを比較。タウンライフエクステリアなど無料で複数業者に依頼できるサービスを紹介。",  alternates: { canonical: "/ranking/estimate/" },
+  description: "外構工事の一括見積もりにおすすめのサービスを比較しています。タウンライフエクステリアなど、無料で複数の業者に見積もりを依頼できるサービスを紹介します。",  alternates: { canonical: "/ranking/estimate/" },
 };
 
 const estimateRanking = [
@@ -29,7 +29,7 @@ export default function EstimateRankingPage() {
         <h1 className="text-2xl md:text-3xl font-bold mb-3">
           外構工事 一括見積もりおすすめサービス2025
         </h1>
-        <p className="text-blue-100 mb-4">複数業者から無料で見積もりを取って費用を比較しましょう</p>
+        <p className="text-blue-100 mb-4">複数の業者から無料で見積もりを取得し、費用を比較できます</p>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold">無料</div>
@@ -51,10 +51,10 @@ export default function EstimateRankingPage() {
         <h2 className="font-bold text-lg mb-4 text-gray-800">一括見積もりの流れ</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {[
-            { step: "1", label: "フォーム入力", desc: "工事内容・住所を入力（3分）" },
-            { step: "2", label: "業者選定", desc: "条件に合う業者をマッチング" },
+            { step: "1", label: "フォーム入力", desc: "工事内容と住所を入力（約3分）" },
+            { step: "2", label: "業者選定", desc: "条件に合う業者が選定される" },
             { step: "3", label: "見積もり受信", desc: "各社から見積もりが届く" },
-            { step: "4", label: "業者を選ぶ", desc: "価格・内容を比較して決定" },
+            { step: "4", label: "業者を選ぶ", desc: "価格と内容を比較して決定" },
           ].map((s) => (
             <div key={s.step} className="text-center">
               <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-2">{s.step}</div>
@@ -72,7 +72,7 @@ export default function EstimateRankingPage() {
           <div key={company.slug} className={`bg-white rounded-2xl shadow-sm border ${i === 0 ? "border-accent border-2" : "border-gray-100"} p-6`}>
             {i === 0 && (
               <div className="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">
-                編集部イチオシ
+                編集部のおすすめ
               </div>
             )}
             <div className="flex items-center gap-3 mb-3">
@@ -94,7 +94,7 @@ export default function EstimateRankingPage() {
               </Link>
               <a href={company.officialUrl} target="_blank" rel="noopener noreferrer nofollow" className="bg-accent text-white px-6 py-2 rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors">
                 <span className="text-xs bg-white text-accent px-1 py-0.5 rounded font-bold mr-1">PR</span>
-                無料で見積もり依頼
+                無料で見積もりを依頼
               </a>
             </div>
           </div>

@@ -2,7 +2,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata = {
   title: "記事の制作ポリシー | 庭リフォームナビ",
-  description: "庭リフォームナビの編集方針・記事制作ポリシーです。正確で信頼できる情報提供を目指しています。",  alternates: { canonical: "/content-policy/" },
+  description: "庭リフォームナビの編集方針・記事制作ポリシーです。正確で信頼できる情報の提供に努めています。",  alternates: { canonical: "/content-policy/" },
 };
 
 export default function ContentPolicyPage() {
@@ -15,23 +15,23 @@ export default function ContentPolicyPage() {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 space-y-8 text-gray-700 leading-relaxed">
 
         <p>
-          庭リフォームナビは、庭・外構リフォームを検討するユーザーに対して、
-          正確で有益な情報をお届けすることを使命としています。
+          庭リフォームナビは、庭・外構リフォームを検討する利用者に対して、
+          正確で有益な情報を提供することを使命としています。
           以下の編集方針に基づいてコンテンツを制作しています。
         </p>
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3 pb-2 border-b border-gray-200">編集方針</h2>
           <p className="mb-3">
-            当サービスの記事は、外構・造園工事に関する専門知識を持つ編集スタッフが制作・監修しています。
-            ユーザーが外構リフォームを検討する際に本当に必要な情報を、
-            わかりやすく・正直に・公平に伝えることを最優先としています。
+            当サイトの記事は、外構・造園工事に関する専門知識を持つ編集スタッフが制作・監修しています。
+            利用者が外構リフォームを検討する際に必要な情報を、
+            わかりやすく、正確かつ公平に伝えることを最優先としています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
-            <li>ユーザーの利益を最優先に情報を選定する</li>
+            <li>利用者の利益を最優先に情報を選定する</li>
             <li>専門家の知見・実績データに基づいてコンテンツを作成する</li>
             <li>広告主の意向に左右されない独立した編集判断を行う</li>
-            <li>わかりやすく実用的な情報提供を心がける</li>
+            <li>わかりやすく実用的な情報の提供に努める</li>
           </ul>
         </section>
 
@@ -47,31 +47,31 @@ export default function ContentPolicyPage() {
             <li>定期的な情報の見直しと更新</li>
           </ul>
           <p className="mt-3 text-sm text-gray-500">
-            ※費用相場は地域・業者・仕様によって大きく変動します。掲載情報はあくまで参考値としてご活用ください。
+            ※費用相場は地域・業者・仕様によって大きく変動します。掲載情報は参考値としてご活用ください。
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3 pb-2 border-b border-gray-200">広告・アフィリエイトとの関係</h2>
           <p className="mb-3">
-            当サービスは一部アフィリエイトリンクおよび広告を掲載しており、
+            当サイトは一部にアフィリエイトリンクおよび広告を掲載しており、
             これらを通じた申し込み・購入により当社に報酬が発生する場合があります。
           </p>
           <p className="mb-3">
-            しかし、編集コンテンツと広告は明確に分離されています。
+            ただし、編集コンテンツと広告は明確に分離しています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
             <li>ランキングや評価は、広告費用・掲載料に影響されません</li>
             <li>PR・広告表示がある箇所は明示しています</li>
             <li>編集部は広告主から独立した基準で評価を行います</li>
-            <li>ユーザーにとって不利益な情報も正直に記載します</li>
+            <li>利用者にとって不利益な情報も省略せずに記載します</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3 pb-2 border-b border-gray-200">更新頻度・情報鮮度</h2>
           <p className="mb-3">
-            外構業界の情報・価格相場は変動します。当サービスでは以下の基準で情報を更新しています。
+            外構業界の情報・価格相場は変動します。当サイトでは以下の基準で情報を更新しています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
             <li>業者ランキング・評価: 半年ごとに見直し</li>

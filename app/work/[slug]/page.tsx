@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!work) return {};
   return {
     title: `${work.title}の費用相場・業者選び | 庭リフォームナビ`,
-    description: `${work.title}の費用相場は${work.costRange}。工期・ポイント・おすすめ業者を詳しく解説します。`,
+    description: `${work.title}の費用相場は${work.costRange}です。工期・注意点・おすすめ業者を解説しています。`,
     alternates: { canonical: `/work/${work.slug}/` },
   };
 }
@@ -57,7 +57,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
 
       {/* Tips */}
       <div className="bg-bg rounded-2xl p-6 mb-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">工事のポイント・注意点</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-800">工事の要点・注意点</h2>
         <ul className="space-y-3">
           {work.tips.map((tip, i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
@@ -117,8 +117,8 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-primary to-emerald-600 rounded-2xl p-8 text-white text-center">
-        <h2 className="text-xl font-bold mb-2">{work.title}の無料見積もりを取る</h2>
-        <p className="text-emerald-100 mb-4 text-sm">複数業者から見積もりを比較して最安値を見つけましょう</p>
+        <h2 className="text-xl font-bold mb-2">{work.title}の無料見積もり</h2>
+        <p className="text-emerald-100 mb-4 text-sm">複数の業者から見積もりを取得し、費用を比較できます</p>
         <Link
           href="/ranking/estimate/"
           className="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-colors inline-block"

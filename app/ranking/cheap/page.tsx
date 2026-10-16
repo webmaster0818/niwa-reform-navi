@@ -4,7 +4,7 @@ import companies from "@/data/companies.json";
 
 export const metadata = {
   title: "外構工事 安い業者ランキング2025 | 庭リフォームナビ",
-  description: "外構工事が安い業者ランキング。費用を抑えて高品質な工事をするためのおすすめ業者を紹介します。",  alternates: { canonical: "/ranking/cheap/" },
+  description: "外構工事を安く依頼できる業者のランキングです。費用を抑えつつ品質を確保するためのおすすめ業者を紹介しています。",  alternates: { canonical: "/ranking/cheap/" },
 };
 
 // Sort by cheapness (simplified based on avgCost)
@@ -28,19 +28,19 @@ export default function CheapRankingPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
           外構工事 安い業者ランキング2025
         </h1>
-        <p className="text-gray-600">費用を抑えながら品質のいい外構工事ができる業者を厳選</p>
+        <p className="text-gray-600">費用を抑えながら、品質の高い外構工事を依頼できる業者を厳選しています</p>
       </div>
 
       {/* Tips */}
       <div className="bg-bg rounded-2xl p-6 mb-8">
-        <h2 className="font-bold text-lg mb-3 text-gray-800">外構費用を安くするコツ</h2>
+        <h2 className="font-bold text-lg mb-3 text-gray-800">外構費用を抑える方法</h2>
         <ul className="space-y-2 text-sm text-gray-700">
           {[
-            "複数業者から見積もりを取って比較する（最低3社推奨）",
-            "ハウスメーカー経由ではなく直接業者に依頼する",
-            "オフシーズン（11〜2月）に依頼すると値引き交渉しやすい",
-            "工事をまとめて依頼することで割引を受けられる場合がある",
-            "自分でできる部分はDIYで対応して費用削減",
+            "複数の業者から見積もりを取得して比較する（3社以上を推奨）",
+            "ハウスメーカーを経由せず、外構業者に直接依頼する",
+            "閑散期（11〜2月）に依頼すると、価格交渉に応じてもらいやすい",
+            "複数の工事をまとめて依頼すると、割引を受けられる場合がある",
+            "自分で行える部分をDIYとし、費用を削減する",
           ].map((tip, i) => (
             <li key={i} className="flex items-start gap-2">
               <span className="text-primary font-bold"></span>

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!scene) return {};
   return {
     title: `${scene.title}の外構・庭リフォームガイド | 庭リフォームナビ`,
-    description: `${scene.title}の外構工事について詳しく解説。費用相場・おすすめ業者・注意点を紹介します。`,
+    description: `${scene.title}の外構工事について、費用相場・おすすめ業者・注意点を解説しています。`,
     alternates: { canonical: `/scene/${scene.slug}/` },
   };
 }
@@ -50,7 +50,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
 
       {/* Tips */}
       <div className="bg-bg rounded-2xl p-6 mb-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">{scene.title}の重要ポイント</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-800">{scene.title}の要点</h2>
         <ul className="space-y-3">
           {scene.tips.map((tip, i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-gray-700 bg-white rounded-xl p-3">
@@ -128,8 +128,8 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center">
-        <h2 className="text-xl font-bold mb-2">{scene.title}の無料見積もりを取る</h2>
-        <p className="text-blue-100 mb-4 text-sm">まずは複数業者に相談して、最適なプランを見つけましょう</p>
+        <h2 className="text-xl font-bold mb-2">{scene.title}の無料見積もり</h2>
+        <p className="text-blue-100 mb-4 text-sm">複数の業者に相談し、条件に合ったプランを比較できます</p>
         <Link
           href="/ranking/estimate/"
           className="bg-white text-accent px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors inline-block"

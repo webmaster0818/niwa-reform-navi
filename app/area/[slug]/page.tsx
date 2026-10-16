@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {};
   const url = `${SITE}/area/${area.slug}/`;
   const title = `${area.name}の外構・庭リフォーム業者を対応エリア表記で比較 | 庭リフォームナビ`;
-  const description = `${area.name}（${area.prefectures.join("・")}）で使える外構・庭リフォームの一括見積もり／業者紹介サービス${companies.length}社を、各社が公表している対応エリアの表記で比較。申し込み前の確認手順もまとめました。`;
+  const description = `${area.name}（${area.prefectures.join("・")}）で使える外構・庭リフォームの一括見積もり／業者紹介サービス${companies.length}社を、各社が公表している対応エリアの表記で比較しています。申し込み前の確認手順もまとめています。`;
   return {
     title,
     description,
@@ -100,16 +100,16 @@ export default async function AreaPage({ params }: Props) {
 
       {/* Editorial note — must stay above the table */}
       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
-        <h2 className="text-base font-bold text-amber-900 mb-2">このページの読み方</h2>
+        <h2 className="text-base font-bold text-amber-900 mb-2">本ページの見方</h2>
         <ul className="space-y-1.5 text-sm text-amber-900/90 leading-relaxed">
           <li>
-            掲載しているのは各社が公式サイトで公表している対応エリアの表記そのものです。{area.name}
-            での対応可否・紹介可能な会社数は各社へ確認してください。
+            当サイトでは、各社が公式サイトで公表している対応エリアの表記をそのまま掲載しています。{area.name}
+            での対応可否・紹介可能な会社数は、各社にご確認ください。
           </li>
           <li>
-            各社は都道府県別の実績や評価を公表していないため、「{area.name}に強い」といった地域別の優劣は判定していません。
+            各社は都道府県別の実績や評価を公表していないため、「{area.name}に強い」といった地域別の優劣は評価していません。
           </li>
-          <li>地域別の施工件数・平均費用は公表資料で確認できなかったため、このページには記載していません。</li>
+          <li>地域別の施工件数・平均費用は公表資料で確認できないため、本ページには記載していません。</li>
         </ul>
       </div>
 
@@ -119,7 +119,7 @@ export default async function AreaPage({ params }: Props) {
           {area.name}で使えるサービスの「対応エリア」公表表記
         </h2>
         <p className="text-xs text-gray-500 mb-4">
-          出典：各社公式サイトの記載（当サイトの業者レビュー記事「基本情報」欄に転記したもの）
+          出典：各社公式サイトの記載（当サイトの業者の口コミ記事「基本情報」欄に転記したもの）
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
@@ -146,7 +146,7 @@ export default async function AreaPage({ params }: Props) {
                     )}
                   </td>
                   <td className="p-3 text-gray-700 leading-relaxed">{c.text}</td>
-                  <td className="p-3 text-gray-500 text-xs whitespace-nowrap">各社へ確認</td>
+                  <td className="p-3 text-gray-500 text-xs whitespace-nowrap">各社に確認</td>
                 </tr>
               ))}
             </tbody>
@@ -154,7 +154,7 @@ export default async function AreaPage({ params }: Props) {
         </div>
         <p className="text-xs text-gray-500 mt-4 leading-relaxed">
           表記が「全国」であっても、市区町村によって紹介できる加盟店がない場合があるとされています。
-          {area.name}の住所での可否は、申し込み前に各社へ直接確認してください。
+          {area.name}の住所での可否は、申し込み前に各社へ直接ご確認ください。
         </p>
       </div>
 
@@ -186,13 +186,13 @@ export default async function AreaPage({ params }: Props) {
           ))}
         </ul>
         <p className="text-xs text-gray-500 mt-4 leading-relaxed">
-          建築確認や自治体の助成制度の要否は、工事内容と所在地によって扱いが異なります。判断は各社および該当の自治体へ確認してください。
+          建築確認や自治体の助成制度の要否は、工事内容と所在地によって扱いが異なります。判断は、各社および該当する自治体にご確認ください。
         </p>
       </div>
 
       {/* FAQ */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">{area.name}のエリア対応について寄せられる疑問</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-800">{area.name}のエリア対応に関するよくある質問</h2>
         <div className="space-y-4">
           {area.faqs.map((faq, i) => (
             <details key={i} className="border border-gray-200 rounded-xl">
@@ -214,7 +214,7 @@ export default async function AreaPage({ params }: Props) {
 
       {/* Other areas */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-        <h2 className="text-lg font-bold mb-4 text-gray-800">ほかのエリアの対応状況を見る</h2>
+        <h2 className="text-lg font-bold mb-4 text-gray-800">他のエリアの対応状況</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {others.map((a) => (
             <Link
@@ -231,9 +231,9 @@ export default async function AreaPage({ params }: Props) {
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center">
-        <h2 className="text-xl font-bold mb-2">{area.name}の住所で対応可否を確かめる</h2>
+        <h2 className="text-xl font-bold mb-2">{area.name}の住所での対応可否の確認</h2>
         <p className="text-blue-100 mb-4 text-sm">
-          複数のサービスに同じ条件で相談すると、紹介可能な会社があるかを比べられます
+          複数のサービスに同じ条件で相談すると、紹介可能な会社の有無を比較できます
         </p>
         <Link
           href="/ranking/estimate/"

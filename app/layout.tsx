@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [OG_IMAGE.url],
   },
   title: "庭リフォームナビ | 外構・庭工事の比較・見積もりサイト",
-  description: "庭リフォームの費用・業者比較・見積もりならお任せ。ウッドデッキ、カーポート、フェンス、コンクリートなど外構工事の専門比較サイトです。",
+  description: "庭リフォームの費用相場・業者比較・見積もりに関する情報をまとめた比較サイトです。ウッドデッキ、カーポート、フェンス、コンクリートなど外構工事の情報を掲載しています。",
 };
 
 export default function RootLayout({

@@ -4,8 +4,8 @@ import reviewsData from "@/data/reviews.json";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "外構・庭リフォーム業者の口コミ・評判まとめ｜実際のGoogleレビューで検証",
-  description: "外構・庭・エクステリアリフォームの比較サービス・業者を、実際のGoogle口コミと運営会社の公開情報で中立的に検証します。",
+  title: "外構・庭リフォーム業者の口コミ・評判｜Googleマップの口コミで検証",
+  description: "外構・庭・エクステリアリフォームの比較サービス・業者を、Googleマップの口コミと運営会社の公開情報をもとに中立的な立場で検証しています。",
   alternates: { canonical: "https://garden-reform-navi.com/review/" },
 };
 
@@ -13,9 +13,9 @@ export default function ReviewIndex() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       <Breadcrumb items={[{ label: "口コミ・評判" }]} />
-      <h1 className="text-2xl sm:text-3xl font-bold text-text-primary mt-2 mb-4">外構・庭リフォーム業者の口コミ・評判まとめ</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-text-primary mt-2 mb-4">外構・庭リフォーム業者の口コミ・評判</h1>
       <p className="text-[15px] leading-8 text-text-secondary mb-8">
-        実際にGoogleマップへ投稿された口コミと、各社の公開情報をもとに、外構・庭・エクステリアリフォームの比較サービス・業者を中立的に検証します。掲載しているのはすべて実在のレビューまたは公式の利用者の声です。
+        当サイトでは、Googleマップに投稿された口コミと各社の公開情報をもとに、外構・庭・エクステリアリフォームの比較サービス・業者を中立的な立場で検証しています。掲載している口コミは、いずれも実際に投稿されたものか、公式サイトに掲載された利用者の声です。
       </p>
       <div className="space-y-4">
         {reviewsData.map((r) => (

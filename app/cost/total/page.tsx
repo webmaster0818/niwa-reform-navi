@@ -4,15 +4,15 @@ import works from "@/data/works.json";
 
 export const metadata = {
   title: "外構・庭リフォームの費用相場まとめ2025 | 庭リフォームナビ",
-  description: "外構工事・庭リフォームの費用相場を工事の種類別に詳しく解説。ウッドデッキ・カーポート・フェンスなど全工種の費用目安を紹介します。",  alternates: { canonical: "/cost/total/" },
+  description: "外構工事・庭リフォームの費用相場を工事の種類別に解説しています。ウッドデッキ・カーポート・フェンスなど、各工事の費用の目安をまとめています。",  alternates: { canonical: "/cost/total/" },
 };
 
 const costDetails = [
   { label: "解体・撤去費用", range: "5〜30万円", note: "既存構造物の撤去が必要な場合" },
   { label: "基礎工事費用", range: "10〜30万円", note: "コンクリート基礎が必要な工事" },
-  { label: "材料費", range: "工事費の50〜70%", note: "素材・商品によって大きく変動" },
+  { label: "材料費", range: "工事費の50〜70%", note: "素材・商品によって大きく異なる" },
   { label: "施工費", range: "工事費の30〜50%", note: "職人の技術料・人件費" },
-  { label: "設計・デザイン料", range: "0〜10万円", note: "本格設計の場合に発生" },
+  { label: "設計・デザイン料", range: "0〜10万円", note: "本格的な設計を依頼する場合に発生" },
   { label: "諸経費・廃材処分", range: "2〜10万円", note: "廃材処分や現場管理費" },
 ];
 
@@ -27,7 +27,7 @@ export default function CostTotalPage() {
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
         外構・庭リフォームの費用相場まとめ2025
       </h1>
-      <p className="text-gray-600 mb-8">外構工事の費用相場を種類別・規模別に詳しく解説します。見積もり前の参考にしてください。</p>
+      <p className="text-gray-600 mb-8">外構工事の費用相場を、工事の種類別・規模別に解説しています。見積もりを依頼する前の参考としてご活用ください。</p>
 
       {/* Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -42,9 +42,9 @@ export default function CostTotalPage() {
           <div className="text-xs text-amber-200">駐車場+フェンス+植栽など</div>
         </div>
         <div className="bg-accent text-white rounded-2xl p-6 text-center">
-          <div className="text-sm text-blue-100 mb-2">大規模工事（フル）</div>
+          <div className="text-sm text-blue-100 mb-2">大規模工事（全面）</div>
           <div className="text-2xl font-bold mb-1">200〜500万円</div>
-          <div className="text-xs text-blue-200">全外構のフルリフォーム</div>
+          <div className="text-xs text-blue-200">外構全体の全面改修</div>
         </div>
       </div>
 
@@ -86,15 +86,15 @@ export default function CostTotalPage() {
 
       {/* Saving Tips */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 text-gray-800">外構費用を節約するポイント</h2>
+        <h2 className="text-xl font-bold mb-4 text-gray-800">外構費用を抑える方法</h2>
         <ul className="space-y-3">
           {[
-            "複数業者から見積もりを取って比較する（最低3社）",
-            "ハウスメーカーを経由せず外構専門業者に直接依頼する",
-            "工事時期をオフシーズン（11月〜2月）にずらす",
+            "複数の業者から見積もりを取得して比較する（3社以上）",
+            "ハウスメーカーを経由せず、外構専門業者に直接依頼する",
+            "工事の時期を閑散期（11月〜2月）に設定する",
             "一度に複数の工事をまとめて依頼する",
-            "DIYできる部分は自分でやる",
-            "外構ローンや補助金制度を活用する",
+            "DIYで行える部分は自分で施工する",
+            "外構ローンや補助金制度を利用する",
           ].map((tip, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
               <span className="text-primary font-bold mt-0.5"></span>
@@ -108,14 +108,14 @@ export default function CostTotalPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <Link href="/cost/budget/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
           <div className="font-bold text-gray-800 mb-1"> 予算別プランガイド</div>
-          <div className="text-sm text-gray-500">予算に合わせた工事プランを提案</div>
+          <div className="text-sm text-gray-500">予算ごとの工事プランを掲載</div>
         </Link>
         <Link href="/ranking/estimate/" className="bg-accent text-white rounded-xl p-4 hover:bg-blue-700 transition-colors">
           <div className="font-bold mb-1">
             <span className="text-xs bg-white text-accent px-1.5 py-0.5 rounded font-bold mr-1">PR</span>
-            無料見積もりを取る
+            無料で見積もりを依頼する
           </div>
-          <div className="text-sm text-blue-100">複数業者に一括依頼で費用比較</div>
+          <div className="text-sm text-blue-100">複数の業者に一括で依頼し、費用を比較</div>
         </Link>
       </div>
     </div>
