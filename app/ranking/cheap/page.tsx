@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata = {
-  title: "外構工事 安い業者ランキング2025 | 庭リフォームナビ",
+  title: "外構工事 安い業者ランキング | 庭リフォームナビ",
   description: "外構工事を安く依頼できる業者のランキングです。費用を抑えつつ品質を確保するためのおすすめ業者を紹介しています。",  alternates: { canonical: "/ranking/cheap/" },
 };
 
@@ -26,7 +26,7 @@ export default function CheapRankingPage() {
 
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-          外構工事 安い業者ランキング2025
+          外構工事 安い業者ランキング
         </h1>
         <p className="text-gray-600">費用を抑えながら、品質の高い外構工事を依頼できる業者を厳選しています</p>
       </div>

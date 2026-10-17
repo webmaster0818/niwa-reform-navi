@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata = {
-  title: "外構工事 一括見積もりおすすめサービス2025 | 庭リフォームナビ",
+  title: "外構工事 一括見積もりおすすめサービス | 庭リフォームナビ",
   description: "外構工事の一括見積もりにおすすめのサービスを比較しています。タウンライフエクステリアなど、無料で複数の業者に見積もりを依頼できるサービスを紹介します。",  alternates: { canonical: "/ranking/estimate/" },
 };
 
@@ -27,7 +27,7 @@ export default function EstimateRankingPage() {
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center mb-8">
         <div className="text-sm font-bold bg-white text-accent inline-block px-3 py-1 rounded-full mb-3">PR</div>
         <h1 className="text-2xl md:text-3xl font-bold mb-3">
-          外構工事 一括見積もりおすすめサービス2025
+          外構工事 一括見積もりおすすめサービス
         </h1>
         <p className="text-blue-100 mb-4">複数の業者から無料で見積もりを取得し、費用を比較できます</p>
         <div className="grid grid-cols-3 gap-4 text-center">

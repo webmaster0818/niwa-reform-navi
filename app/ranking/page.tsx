@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata = {
-  title: "外構業者おすすめランキング2025 | 庭リフォームナビ",
+  title: "外構業者おすすめランキング | 庭リフォームナビ",
   description: "外構・庭リフォーム業者の総合おすすめランキング。タウンライフエクステリアやガーデンプラスなど全10社を比較しています。",  alternates: { canonical: "/ranking/" },
 };
 
@@ -17,7 +17,7 @@ export default function RankingPage() {
 
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-          外構業者おすすめランキング2025
+          外構業者おすすめランキング
         </h1>
         <p className="text-gray-600">編集部が厳選した外構業者10社を、総合評価に基づき順位を付けています</p>
       </div>
@@ -86,7 +86,7 @@ export default function RankingPage() {
       {/* Bottom CTA */}
       <div className="mt-10 bg-gradient-to-r from-primary to-emerald-600 rounded-2xl p-8 text-white text-center">
         <h2 className="text-xl font-bold mb-2">複数の業者への一括見積もり依頼</h2>
-        <p className="text-emerald-100 mb-4">複数社を比較することで、費用を最大30%削減できた例もあります</p>
+        <p className="text-emerald-100 mb-4">複数社の見積もりを並べると、同じ工事でも金額や内訳の違いを確認できます</p>
         <Link
           href="/ranking/estimate/"
           className="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-colors inline-block"

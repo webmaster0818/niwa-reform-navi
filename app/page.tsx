@@ -94,7 +94,6 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-emerald-100">
             <span className="flex items-center gap-1.5"> 無料</span>
             <span className="flex items-center gap-1.5"> 最大5社比較</span>
-            <span className="flex items-center gap-1.5"> しつこい営業なし</span>
           </div>
         </div>
       </section>
@@ -165,13 +164,6 @@ export default function Home() {
                     {i === 0 ? " 1位" : i === 1 ? " 2位" : " 3位"}
                   </span>
                 </div>
-                {i === 0 && (
-                  <div className="absolute -top-4 right-5">
-                    <span className="bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
-                      人気No.1
-                    </span>
-                  </div>
-                )}
                 <h3 className="font-black text-lg mt-3 mb-1 text-gray-900">{company.name}</h3>
                 <p className="text-sm text-primary font-semibold mb-4">{company.tagline}</p>
                 <ul className="text-sm text-gray-600 space-y-2 mb-5">
