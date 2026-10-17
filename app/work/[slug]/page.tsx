@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import works from "@/data/works.json";
 import companies from "@/data/companies.json";
+import rules from "@/data/rules.json";
 
 export async function generateStaticParams() {
   return works.map((w) => ({ slug: w.slug }));
@@ -25,6 +26,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
   if (!work) notFound();
 
   const recommendedComps = companies.filter((c) => work.recommendedCompanies.includes(c.slug));
+  const relatedRules = rules.filter((r) => r.relatedWorks.includes(work.slug));
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -92,6 +94,24 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
           ))}
         </div>
       </div>
+
+      {/* Related rules */}
+      {relatedRules.length > 0 && (
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 className="text-lg font-bold mb-2 text-gray-800">{work.title}に関係する法令・手続きガイド</h2>
+          <p className="text-sm text-gray-600 mb-4">工事の前に確認すべき決まりを、条文を引用して整理しています。</p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {relatedRules.map((r) => (
+              <li key={r.slug}>
+                <Link href={`/rule/${r.slug}/`} className="block bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors h-full">
+                  <div className="font-bold text-gray-800 text-sm mb-1">{r.name}</div>
+                  <div className="text-xs text-gray-500">{r.laws[0].name} {r.laws[0].article}</div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* FAQ */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
