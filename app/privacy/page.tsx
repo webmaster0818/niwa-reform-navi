@@ -62,13 +62,13 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3 pb-2 border-b border-gray-200">個人情報の管理</h2>
           <p className="mb-3">
-            当社は、お問い合わせフォーム等から取得した個人情報（氏名・メールアドレス等）を、
+            当社は、メールでのお問い合わせにより取得した個人情報（氏名・メールアドレス等）を、
             お問い合わせへの対応・サービスの改善のみに使用します。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
             <li>取得した個人情報は第三者へ提供・開示しません（法令に基づく場合を除く）</li>
             <li>個人情報は適切なセキュリティ対策を講じて管理します</li>
-            <li>個人情報の開示・訂正・削除のご要望はお問い合わせフォームよりご連絡ください</li>
+            <li>個人情報の開示・訂正・削除のご要望は、メール（<a href="mailto:webmaster@mediax.biz" className="text-primary hover:underline">webmaster@mediax.biz</a>）でご連絡ください</li>
           </ul>
         </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
         <div className="text-sm text-gray-500 pt-4 border-t border-gray-100">
           <p>運営者: 株式会社MediaX</p>
           <p>制定日: 2025年1月1日</p>
-          <p>最終改訂: 2026年4月27日</p>
+          <p>最終改訂: 2026年10月18日</p>
         </div>
       </div>
     </div>

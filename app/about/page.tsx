@@ -38,7 +38,7 @@ export default function AboutPage() {
             <dt className="font-semibold">会社名</dt>
             <dd>株式会社MediaX</dd>
             <dt className="font-semibold">所在地</dt>
-            <dd>東京都内（詳細はお問い合わせください）</dd>
+            <dd>メールでお問い合わせいただいた方にご案内します（webmaster@mediax.biz）</dd>
             <dt className="font-semibold">事業内容</dt>
             <dd>Web メディア運営、比較情報サイトの企画・運営、SEO 関連サービス</dd>
             <dt className="font-semibold">公式サイト</dt>
@@ -78,7 +78,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <p className="text-xs text-gray-500 mt-12">最終更新日：2026年5月21日</p>
+        <p className="text-xs text-gray-500 mt-12">最終更新日：2026年10月18日</p>
       </main>
     </div>
   );

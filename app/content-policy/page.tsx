@@ -23,13 +23,13 @@ export default function ContentPolicyPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3 pb-2 border-b border-gray-200">編集方針</h2>
           <p className="mb-3">
-            当サイトの記事は、外構・造園工事に関する専門知識を持つ編集スタッフが制作・監修しています。
+            当サイトの記事は、運営会社の編集部が、法令・公的機関の資料と各社の公式情報を確認して制作しています。
             利用者が外構リフォームを検討する際に必要な情報を、
             わかりやすく、正確かつ公平に伝えることを最優先としています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
             <li>利用者の利益を最優先に情報を選定する</li>
-            <li>専門家の知見・実績データに基づいてコンテンツを作成する</li>
+            <li>法令・公的機関の資料と各社の公式情報に基づいてコンテンツを作成する</li>
             <li>広告主の意向に左右されない独立した編集判断を行う</li>
             <li>わかりやすく実用的な情報の提供に努める</li>
           </ul>
@@ -41,7 +41,7 @@ export default function ContentPolicyPage() {
             掲載する費用相場・業者情報・工法情報については、以下のプロセスで正確性を確認しています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
-            <li>複数の業者への取材・ヒアリングに基づく情報収集</li>
+            <li>各社の公式サイト・公表資料に基づく情報収集</li>
             <li>公的機関・業界団体の統計データの参照</li>
             <li>掲載前の編集チームによるファクトチェック</li>
             <li>定期的な情報の見直しと更新</li>
@@ -74,7 +74,7 @@ export default function ContentPolicyPage() {
             外構業界の情報・価格相場は変動します。当サイトでは以下の基準で情報を更新しています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
-            <li>業者ランキング・評価: 半年ごとに見直し</li>
+            <li>業者情報: 各社の公式情報の変更を確認した時点で更新</li>
             <li>費用相場情報: 年1回以上の更新</li>
             <li>法令・制度関連情報: 改正時に随時更新</li>
             <li>読者からの指摘・誤情報の報告: 迅速に対応</li>
@@ -89,7 +89,7 @@ export default function ContentPolicyPage() {
           <ul className="list-disc list-inside space-y-2 pl-2">
             <li>国土交通省・業界団体等の公的データを参照する場合は出典を明記</li>
             <li>他サイト・メディアのコンテンツを参照する場合はリンクを掲載</li>
-            <li>独自調査・アンケート結果は調査概要とともに掲載</li>
+            <li>法令は条文の出典（e-Gov法令検索）を明記</li>
           </ul>
         </section>
 
@@ -97,7 +97,7 @@ export default function ContentPolicyPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-3 pb-2 border-b border-gray-200">お問い合わせ・誤情報の報告</h2>
           <p>
             記事内容に誤りや古い情報を発見された場合、または情報の訂正・削除のご要望がある場合は、
-            お問い合わせフォームよりご連絡ください。いただいたご意見は編集部で確認のうえ、
+            メール（<a href="mailto:webmaster@mediax.biz" className="text-primary hover:underline">webmaster@mediax.biz</a>）でご連絡ください。いただいたご意見は編集部で確認のうえ、
             必要に応じて速やかに対応いたします。
           </p>
         </section>
@@ -105,7 +105,7 @@ export default function ContentPolicyPage() {
         <div className="text-sm text-gray-500 pt-4 border-t border-gray-100">
           <p>運営者: 株式会社MediaX</p>
           <p>制定日: 2025年1月1日</p>
-          <p>最終改訂: 2026年4月27日</p>
+          <p>最終改訂: 2026年10月18日</p>
         </div>
       </div>
     </div>
