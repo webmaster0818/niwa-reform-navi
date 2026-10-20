@@ -129,6 +129,17 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
               <div className="px-4 pb-3 pt-2 text-sm text-gray-600 border-t border-gray-100">
                 <span className="text-secondary font-bold mr-1">A</span>
                 {faq.answer}
+                {"source" in faq && faq.source && (
+                  <p className="mt-2 text-xs text-gray-500 leading-relaxed">
+                    出典：{faq.source.text}
+                    {faq.source.links.map((l) => (
+                      <span key={l.url}>
+                        {" "}
+                        <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{l.label}</a>
+                      </span>
+                    ))}
+                  </p>
+                )}
               </div>
             </details>
           ))}
