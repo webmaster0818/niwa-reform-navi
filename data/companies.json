@@ -9,7 +9,7 @@
     "cons": ["対応エリアに一部制限がある", "見積もりの提示まで数日かかる場合がある"],
     "avgCost": "80〜300万円",
     "coverage": "全国",
-    "officialUrl": "https://www.town-life.jp/exterior/"
+    "officialUrl": "https://www.town-life.jp/reform/exterior/"
   },
   {
     "name": "ガーデンプラス",
@@ -21,7 +21,7 @@
     "cons": ["価格帯はやや高い傾向がある", "地域によって担当者の対応に差がある場合がある"],
     "avgCost": "100〜400万円",
     "coverage": "全国主要都市",
-    "officialUrl": "https://www.garden-plus.jp/"
+    "officialUrl": "https://www.garden.ne.jp/"
   },
   {
     "name": "エクスショップ",
