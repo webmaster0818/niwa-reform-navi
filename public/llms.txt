@@ -16,7 +16,7 @@
 - プライバシーポリシー: https://garden-reform-navi.com/privacy/
 - 利用規約: https://garden-reform-navi.com/terms/
 - 記事の制作ポリシー: https://garden-reform-navi.com/content-policy/
-- 法令・手続きガイド: https://garden-reform-navi.com/rule/ （塀・建物／隣地・境界／道路／契約・業者・資格／マンション・賃貸／工事中の届出・近隣／農地・土地利用の28テーマ。条文を引用）
+- 法令・手続きガイド: https://garden-reform-navi.com/rule/ （塀・建物／隣地・境界／道路／契約・業者・資格／マンション・賃貸／工事中の届出・近隣／農地・土地利用の29テーマ。条文を引用）
   - 擁壁・土留めの基準と許可: https://garden-reform-navi.com/rule/yoheki/
   - 防火地域・準防火地域の外構: https://garden-reform-navi.com/rule/bouka-chiiki/
   - 地区計画・景観計画区域の届出: https://garden-reform-navi.com/rule/chiku-keikaku/
@@ -31,6 +31,7 @@
   - 庭の排水工事と下水道法の排水設備: https://garden-reform-navi.com/rule/haisui-setsubi/
   - 農地を庭や駐車場にする場合の農地転用: https://garden-reform-navi.com/rule/nouchi-tenyo/
   - 緑化地域の緑化率と外構工事: https://garden-reform-navi.com/rule/ryokka-chiiki/
+  - 風致地区での外構・庭工事の許可: https://garden-reform-navi.com/rule/fuchi-chiku/
 - エリア別ガイド: https://garden-reform-navi.com/area/kanto/ ほか10地方
 - 業者の口コミ・評判: https://garden-reform-navi.com/review/
 - サイトマップ: https://garden-reform-navi.com/sitemap.xml
