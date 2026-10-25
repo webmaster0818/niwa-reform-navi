@@ -72,7 +72,6 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
               className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors"
             >
               <div className="font-bold text-gray-800 mb-1">{work.title}</div>
-              <div className="text-sm text-primary">{work.costRange}</div>
               <div className="text-xs text-gray-500 mt-1">工期: {work.duration}</div>
             </Link>
           ))}
@@ -91,7 +90,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
               <div className="flex-1">
                 <div className="font-bold text-gray-800">{company.name}</div>
                 <div className="text-sm text-primary">{company.tagline}</div>
-                <div className="text-xs text-gray-500 mt-1">{company.avgCost} | {company.coverage}</div>
+                <div className="text-xs text-gray-500 mt-1">対応: {company.coverage}</div>
               </div>
               <Link
                 href={`/company/${company.slug}/`}

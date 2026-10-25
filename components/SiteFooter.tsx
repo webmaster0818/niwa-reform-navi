@@ -46,7 +46,7 @@ export default function SiteFooter() {
             <h4 className="font-bold mb-3 text-amber-200">費用・シーン</h4>
             <ul className="space-y-2 text-sm text-amber-100">
               <li><Link href="/cost/total/" className="hover:text-white transition-colors">外構費用の総まとめ</Link></li>
-              <li><Link href="/cost/budget/" className="hover:text-white transition-colors">予算別プラン</Link></li>
+              <li><Link href="/cost/budget/" className="hover:text-white transition-colors">予算と見積もり</Link></li>
               <li><Link href="/scene/new-house/" className="hover:text-white transition-colors">新築外構</Link></li>
               <li><Link href="/scene/reform/" className="hover:text-white transition-colors">庭リフォーム</Link></li>
               <li><Link href="/scene/barrier-free/" className="hover:text-white transition-colors">バリアフリー</Link></li>

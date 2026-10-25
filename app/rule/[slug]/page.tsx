@@ -234,7 +234,7 @@ export default async function RulePage({ params }: Props) {
                 className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors"
               >
                 <div className="font-bold text-gray-800 mb-1">{w.title}</div>
-                <div className="text-xs text-gray-500">費用の目安 {w.costRange}</div>
+                <div className="text-xs text-gray-500">工期の目安 {w.duration}</div>
               </Link>
             ))}
           </div>

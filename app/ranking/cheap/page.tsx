@@ -7,7 +7,7 @@ export const metadata = {
   description: "外構工事を安く依頼できる業者のランキングです。費用を抑えつつ品質を確保するためのおすすめ業者を紹介しています。",  alternates: { canonical: "/ranking/cheap/" },
 };
 
-// Sort by cheapness (simplified based on avgCost)
+// 並び順の根拠だった avgCost（出典なし）は 2026-10-25 に削除。並び順の基準は okina 判断待ち
 const cheapRanking = [
   companies.find((c) => c.slug === "ex-shop")!,
   companies.find((c) => c.slug === "mitsumoa")!,
@@ -59,7 +59,6 @@ export default function CheapRankingPage() {
                 {i + 1}位
               </span>
               <h2 className="font-bold text-lg text-gray-900">{company.name}</h2>
-              <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium ml-auto">{company.avgCost}</span>
             </div>
             <p className="text-sm text-gray-600 mb-3">{company.tagline}</p>
             <ul className="space-y-1 mb-4">

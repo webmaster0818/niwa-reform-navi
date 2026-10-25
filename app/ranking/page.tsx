@@ -97,10 +97,6 @@ export default function RankingPage() {
                     <h2 className="text-lg font-bold text-gray-900">{company.name}</h2>
                     <p className="text-primary text-sm font-medium">{company.tagline}</p>
                   </div>
-                  <div className="text-right shrink-0">
-                    <div className="text-xs text-gray-500">費用相場</div>
-                    <div className="text-sm font-bold text-gray-800">{company.avgCost}</div>
-                  </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-2">{company.description.slice(0, 80)}...</p>
                 <div className="flex flex-wrap gap-2 mt-3">

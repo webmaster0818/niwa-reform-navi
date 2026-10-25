@@ -3,18 +3,10 @@ import Breadcrumb from "@/components/Breadcrumb";
 import works from "@/data/works.json";
 
 export const metadata = {
-  title: "外構・庭リフォームの費用相場まとめ | 庭リフォームナビ",
-  description: "外構工事・庭リフォームの費用相場を工事の種類別に解説しています。ウッドデッキ・カーポート・フェンスなど、各工事の費用の目安をまとめています。",  alternates: { canonical: "/cost/total/" },
+  title: "外構・庭リフォームの費用の確認点まとめ | 庭リフォームナビ",
+  description: "外構工事・庭リフォームの費用を確認する際の要点を工事の種類別にまとめています。ウッドデッキ・カーポート・フェンスなど各工事の費用の目安は、出典つきで工事別のページに掲載しています。",  alternates: { canonical: "/cost/total/" },
 };
 
-const costDetails = [
-  { label: "解体・撤去費用", range: "5〜30万円", note: "既存構造物の撤去が必要な場合" },
-  { label: "基礎工事費用", range: "10〜30万円", note: "コンクリート基礎が必要な工事" },
-  { label: "材料費", range: "工事費の50〜70%", note: "素材・商品によって大きく異なる" },
-  { label: "施工費", range: "工事費の30〜50%", note: "職人の技術料・人件費" },
-  { label: "設計・デザイン料", range: "0〜10万円", note: "本格的な設計を依頼する場合に発生" },
-  { label: "諸経費・廃材処分", range: "2〜10万円", note: "廃材処分や現場管理費" },
-];
 
 export default function CostTotalPage() {
   return (
@@ -25,60 +17,29 @@ export default function CostTotalPage() {
       ]} />
 
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-        外構・庭リフォームの費用相場まとめ
+        外構・庭リフォームの費用の確認点まとめ
       </h1>
-      <p className="text-gray-600 mb-8">外構工事の費用相場を、工事の種類別・規模別に解説しています。見積もりを依頼する前の参考としてご活用ください。</p>
+      <p className="text-gray-600 mb-8">外構工事の費用を確認する際の要点を、工事の種類別にまとめています。見積もりを依頼する前の参考としてご活用ください。</p>
 
-      {/* Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="bg-primary text-white rounded-2xl p-6 text-center">
-          <div className="text-sm text-emerald-100 mb-2">小規模工事（部分的）</div>
-          <div className="text-2xl font-bold mb-1">10〜80万円</div>
-          <div className="text-xs text-emerald-200">フェンス・ライティングなど</div>
-        </div>
-        <div className="bg-secondary text-white rounded-2xl p-6 text-center">
-          <div className="text-sm text-amber-100 mb-2">中規模工事（一般的）</div>
-          <div className="text-2xl font-bold mb-1">80〜200万円</div>
-          <div className="text-xs text-amber-200">駐車場+フェンス+植栽など</div>
-        </div>
-        <div className="bg-accent text-white rounded-2xl p-6 text-center">
-          <div className="text-sm text-blue-100 mb-2">大規模工事（全面）</div>
-          <div className="text-2xl font-bold mb-1">200〜500万円</div>
-          <div className="text-xs text-blue-200">外構全体の全面改修</div>
-        </div>
+      {/* Overview：規模別の金額は出典がないため 2026-10-25 に削除 */}
+      <div className="bg-bg rounded-2xl p-6 mb-8 text-sm text-gray-700 leading-relaxed">
+        外構工事の費用は、敷地の広さ・素材・既存構造物の撤去の有無で大きく変わります。工事ごとの費用の目安は、掲載サービスの記事に記載された金額を出典つきで各工事のページに掲載しています。金額は業者の見積もりで確認してください。
       </div>
 
       {/* Work by Work */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 text-gray-800">工事の種類別 費用相場</h2>
+        <h2 className="text-xl font-bold mb-4 text-gray-800">工事の種類別の工期と難易度</h2>
         <div className="space-y-4">
           {works.map((work) => (
             <div key={work.slug} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
               <div className="flex items-center justify-between mb-2">
                 <Link href={`/work/${work.slug}/`} className="font-bold text-primary hover:underline">{work.title}</Link>
-                <span className="font-bold text-gray-800">{work.costRange}</span>
               </div>
               <p className="text-sm text-gray-600">{work.description.slice(0, 80)}...</p>
               <div className="flex gap-3 mt-2 text-xs text-gray-500">
                 <span>工期: {work.duration}</span>
                 <span>難易度: {work.difficulty}</span>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Cost Breakdown */}
-      <div className="bg-bg rounded-2xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 text-gray-800">外構工事費用の内訳</h2>
-        <div className="space-y-3">
-          {costDetails.map((item, i) => (
-            <div key={i} className="bg-white rounded-xl p-4 flex items-center justify-between gap-4">
-              <div>
-                <div className="font-bold text-sm text-gray-800">{item.label}</div>
-                <div className="text-xs text-gray-500">{item.note}</div>
-              </div>
-              <div className="text-primary font-bold text-sm shrink-0">{item.range}</div>
             </div>
           ))}
         </div>
@@ -107,8 +68,8 @@ export default function CostTotalPage() {
       {/* Links */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <Link href="/cost/budget/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
-          <div className="font-bold text-gray-800 mb-1"> 予算別プランガイド</div>
-          <div className="text-sm text-gray-500">予算ごとの工事プランを掲載</div>
+          <div className="font-bold text-gray-800 mb-1"> 予算に合わせた見積もりの取り方</div>
+          <div className="text-sm text-gray-500">予算ごとの工事範囲は見積もりで確認</div>
         </Link>
         <Link href="/ranking/estimate/" className="bg-accent text-white rounded-xl p-4 hover:bg-blue-700 transition-colors">
           <div className="font-bold mb-1">

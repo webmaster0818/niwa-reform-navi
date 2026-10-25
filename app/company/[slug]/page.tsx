@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const company = companies.find((c) => c.slug === slug);
   if (!company) return {};
   return {
-    title: `${company.name}の口コミ・評判・費用 | 庭リフォームナビ`,
-    description: `${company.name}の特徴・メリット・デメリット・費用相場を解説しています。${company.tagline}。`,
+    title: `${company.name}の口コミ・評判・特徴 | 庭リフォームナビ`,
+    description: `${company.name}の特徴・メリット・デメリットを解説しています。${company.tagline}。`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
 }
@@ -48,16 +48,12 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {/* Key Info */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <div className="bg-bg rounded-xl p-4 text-center">
-          <div className="text-xs text-gray-500 mb-1">平均費用</div>
-          <div className="font-bold text-primary">{company.avgCost}</div>
-        </div>
+      <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-bg rounded-xl p-4 text-center">
           <div className="text-xs text-gray-500 mb-1">対応エリア</div>
           <div className="font-bold text-gray-800">{company.coverage}</div>
         </div>
-        <div className="col-span-2 md:col-span-1 bg-accent text-white rounded-xl p-4 text-center">
+        <div className="bg-accent text-white rounded-xl p-4 text-center">
           <div className="text-xs text-blue-100 mb-1">無料見積もり</div>
           <div className="font-bold">公式サイトで依頼</div>
         </div>

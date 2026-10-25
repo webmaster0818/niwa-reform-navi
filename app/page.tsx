@@ -21,7 +21,7 @@ const workIconSrc: Record<string, string> = {
 const faqData = [
   {
     q: "庭・外構リフォームの費用相場はどのくらいですか？",
-    a: "工事の種類や規模によって異なりますが、外構工事全般では一般的に100〜300万円が相場です。ウッドデッキや植栽のみであれば30〜80万円、全面的な改修では300万円以上となる場合もあります。",
+    a: "新築の外構工事は100万〜300万円程度、外構のリフォームは50万〜100万円程度が目安です（ミツモア・比較ビズの記事。新築外構の金額はタウンライフリフォームの記事も同じ値。2026年10月25日確認）。工事の内容や広さで変わるため、金額は業者の見積もりで確認してください。",
   },
   {
     q: "外構業者はどのように選べばよいですか？",
@@ -104,7 +104,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             工事の種類から探す
           </h2>
-          <p className="text-sm text-gray-500">工事の種類ごとに費用相場と施工例を掲載しています</p>
+          <p className="text-sm text-gray-500">工事の種類ごとに工期・注意点・費用の目安（出典つき）を掲載しています</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {works.map((work) => (
@@ -120,9 +120,6 @@ export default function Home() {
               </div>
               <div className="font-bold text-gray-800 group-hover:text-primary text-sm mb-1">
                 {work.title}
-              </div>
-              <div className="text-xs text-primary font-semibold bg-emerald-50 rounded-full px-2 py-0.5 inline-block mt-1">
-                {work.costRange}
               </div>
             </Link>
           ))}
@@ -202,16 +199,15 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 py-14">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-            工事別の費用相場一覧
+            工事別の工期と難易度の目安
           </h2>
-          <p className="text-sm text-gray-500">工事の種類・規模別の費用と工期の目安をまとめています</p>
+          <p className="text-sm text-gray-500">費用の目安は各工事のページに出典つきで掲載しています。金額は業者の見積もりで確認してください</p>
         </div>
         <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-100">
           <table className="w-full bg-white">
             <thead>
               <tr className="bg-primary text-white">
                 <th className="text-left px-5 py-4 rounded-tl-2xl font-semibold">工事の種類</th>
-                <th className="text-left px-5 py-4 font-semibold">費用相場</th>
                 <th className="text-left px-5 py-4 font-semibold">工期</th>
                 <th className="text-left px-5 py-4 rounded-tr-2xl font-semibold">難易度</th>
               </tr>
@@ -235,7 +231,6 @@ export default function Home() {
                       <span>{work.title}</span>
                     </Link>
                   </td>
-                  <td className="px-5 py-3.5 text-sm text-gray-700 font-medium">{work.costRange}</td>
                   <td className="px-5 py-3.5 text-sm text-gray-600">{work.duration}</td>
                   <td className="px-5 py-3.5 text-sm">
                     <span
@@ -257,7 +252,7 @@ export default function Home() {
         </div>
         <div className="text-center mt-6">
           <Link href="/cost/total/" className="text-primary font-bold hover:underline text-sm">
-            費用相場の詳細を見る →
+            工事別の費用の確認点を見る →
           </Link>
         </div>
       </section>
@@ -278,7 +273,7 @@ export default function Home() {
               { href: "/scene/barrier-free/", label: "バリアフリー", desc: "安全で使いやすい庭づくり", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="5" r="2"/><path strokeLinecap="round" strokeLinejoin="round" d="M12 7v6m-4 4h8M8 17l-2 4m10-4l2 4"/></svg>, color: "from-blue-50 to-blue-100" },
               { href: "/scene/diy/", label: "DIYと業者工事", desc: "費用を抑えた庭づくり", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>, color: "from-purple-50 to-purple-100" },
               { href: "/scene/narrow/", label: "狭小・変形地", desc: "限られたスペースの活用", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><polygon points="12 2 2 22 22 22"/></svg>, color: "from-rose-50 to-rose-100" },
-              { href: "/cost/budget/", label: "予算別プラン", desc: "予算ごとの工事プラン", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><line x1="12" y1="1" x2="12" y2="23"/><path strokeLinecap="round" d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>, color: "from-yellow-50 to-yellow-100" },
+              { href: "/cost/budget/", label: "予算と見積もり", desc: "予算に合わせた見積もりの取り方", iconEl: <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><line x1="12" y1="1" x2="12" y2="23"/><path strokeLinecap="round" d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>, color: "from-yellow-50 to-yellow-100" },
             ].map((item) => (
               <Link
                 key={item.href}

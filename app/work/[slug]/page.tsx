@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!work) return {};
   return {
     title: `${work.title}の費用相場・業者選び | 庭リフォームナビ`,
-    description: `${work.title}の費用相場は${work.costRange}です。工期・注意点・おすすめ業者を解説しています。`,
+    description: `${work.title}の費用相場（掲載サービスの記事に記載された金額・出典つき）、工期、注意点、おすすめ業者を解説しています。`,
     alternates: { canonical: `/work/${work.slug}/` },
   };
 }
@@ -42,11 +42,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-primary text-white rounded-xl p-4 text-center">
-          <div className="text-xs mb-1 text-emerald-100">費用相場</div>
-          <div className="font-bold text-sm">{work.costRange}</div>
-        </div>
+      <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-secondary text-white rounded-xl p-4 text-center">
           <div className="text-xs mb-1 text-amber-100">工期</div>
           <div className="font-bold text-sm">{work.duration}</div>
@@ -82,7 +78,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
               <div className="flex-1">
                 <div className="font-bold text-gray-800">{company.name}</div>
                 <div className="text-sm text-primary">{company.tagline}</div>
-                <div className="text-xs text-gray-500 mt-1">費用相場: {company.avgCost} | 対応: {company.coverage}</div>
+                <div className="text-xs text-gray-500 mt-1">対応: {company.coverage}</div>
               </div>
               <Link
                 href={`/company/${company.slug}/`}
