@@ -104,7 +104,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             工事の種類から探す
           </h2>
-          <p className="text-sm text-gray-500">工事の種類ごとに工期・注意点・費用の目安（出典つき）を掲載しています</p>
+          <p className="text-sm text-gray-500">工事の種類ごとに工期・注意点・費用の目安と出典を掲載しています</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {works.map((work) => (
@@ -201,7 +201,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             工事別の工期と難易度の目安
           </h2>
-          <p className="text-sm text-gray-500">費用の目安は各工事のページに出典つきで掲載しています。金額は業者の見積もりで確認してください</p>
+          <p className="text-sm text-gray-500">費用の目安は各工事のページに出典とともに掲載しています。金額は業者の見積もりで確認してください</p>
         </div>
         <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-100">
           <table className="w-full bg-white">

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!work) return {};
   return {
     title: `${work.title}の費用相場・業者選び | 庭リフォームナビ`,
-    description: `${work.title}の費用相場（掲載サービスの記事に記載された金額・出典つき）、工期、注意点、おすすめ業者を解説しています。`,
+    description: `${work.title}の費用相場（掲載サービスの記事に記載された金額と出典）、工期、注意点、おすすめ業者を解説しています。`,
     alternates: { canonical: `/work/${work.slug}/` },
   };
 }
