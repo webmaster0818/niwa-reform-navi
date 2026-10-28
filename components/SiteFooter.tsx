@@ -17,7 +17,7 @@ export default function SiteFooter() {
             <h4 className="font-bold mb-3 text-amber-200">業者ランキング</h4>
             <ul className="space-y-2 text-sm text-amber-100">
               <li><Link href="/ranking/" className="hover:text-white transition-colors">総合ランキング</Link></li>
-              <li><Link href="/ranking/cheap/" className="hover:text-white transition-colors">安い業者ランキング</Link></li>
+              <li><Link href="/ranking/cheap/" className="hover:text-white transition-colors">外構費用を抑える方法</Link></li>
               <li><Link href="/ranking/estimate/" className="hover:text-white transition-colors">おすすめの見積もりサービス</Link></li>
             </ul>
           </div>
@@ -46,7 +46,6 @@ export default function SiteFooter() {
             <h4 className="font-bold mb-3 text-amber-200">費用・シーン</h4>
             <ul className="space-y-2 text-sm text-amber-100">
               <li><Link href="/cost/total/" className="hover:text-white transition-colors">外構費用の総まとめ</Link></li>
-              <li><Link href="/cost/budget/" className="hover:text-white transition-colors">予算と見積もり</Link></li>
               <li><Link href="/scene/new-house/" className="hover:text-white transition-colors">新築外構</Link></li>
               <li><Link href="/scene/reform/" className="hover:text-white transition-colors">庭リフォーム</Link></li>
               <li><Link href="/scene/barrier-free/" className="hover:text-white transition-colors">バリアフリー</Link></li>

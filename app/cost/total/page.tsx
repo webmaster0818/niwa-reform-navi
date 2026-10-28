@@ -67,9 +67,9 @@ export default function CostTotalPage() {
 
       {/* Links */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <Link href="/cost/budget/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
-          <div className="font-bold text-gray-800 mb-1"> 予算に合わせた見積もりの取り方</div>
-          <div className="text-sm text-gray-500">予算ごとの工事範囲は見積もりで確認</div>
+        <Link href="/ranking/cheap/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
+          <div className="font-bold text-gray-800 mb-1"> 外構工事の費用を抑える方法</div>
+          <div className="text-sm text-gray-500">見積もりの確認点と依頼先の公式情報</div>
         </Link>
         <Link href="/ranking/estimate/" className="bg-accent text-white rounded-xl p-4 hover:bg-blue-700 transition-colors">
           <div className="font-bold mb-1">

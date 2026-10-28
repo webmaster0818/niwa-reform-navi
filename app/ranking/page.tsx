@@ -73,7 +73,7 @@ export default function RankingPage() {
       {/* Sub Rankings */}
       <div className="flex gap-3 justify-center mb-8 flex-wrap">
         <Link href="/ranking/cheap/" className="bg-bg border border-primary text-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-colors">
-           価格重視のランキング
+           外構費用を抑える方法
         </Link>
         <Link href="/ranking/estimate/" className="bg-accent text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition-colors">
           <span className="text-xs bg-white text-accent px-1 py-0.5 rounded font-bold mr-1">PR</span>
