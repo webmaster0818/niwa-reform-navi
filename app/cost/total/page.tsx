@@ -45,26 +45,7 @@ export default function CostTotalPage() {
         </div>
       </div>
 
-      {/* Saving Tips */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 text-gray-800">外構費用を抑える方法</h2>
-        <ul className="space-y-3">
-          {[
-            "複数の業者から見積もりを取得して比較する（3社以上）",
-            "ハウスメーカーを経由せず、外構専門業者に直接依頼する",
-            "工事の時期を閑散期（11月〜2月）に設定する",
-            "一度に複数の工事をまとめて依頼する",
-            "DIYで行える部分は自分で施工する",
-            "外構ローンや補助金制度を利用する",
-          ].map((tip, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-              <span className="text-primary font-bold mt-0.5"></span>
-              {tip}
-            </li>
-          ))}
-        </ul>
-      </div>
-
+      {/* 「外構費用を抑える方法」（閑散期 11月〜2月 ほか6項目）は出典がないため 2026-10-28 に削除。見積もりの確認点は /ranking/cheap/ に出典つきで掲載 */}
       {/* Links */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <Link href="/ranking/cheap/" className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors">
