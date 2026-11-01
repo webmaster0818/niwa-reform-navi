@@ -74,6 +74,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
 
       {/* Pros & Cons */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {company.pros.length > 0 && (
         <div className="bg-green-50 rounded-2xl p-6 border border-green-200">
           <h2 className="text-lg font-bold mb-4 text-green-800">メリット</h2>
           <ul className="space-y-3">
@@ -85,6 +86,8 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
             ))}
           </ul>
         </div>
+        )}
+        {company.cons.length > 0 && (
         <div className="bg-red-50 rounded-2xl p-6 border border-red-200">
           <h2 className="text-lg font-bold mb-4 text-red-800">デメリット</h2>
           <ul className="space-y-3">
@@ -96,6 +99,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
             ))}
           </ul>
         </div>
+        )}
       </div>
 
       {/* CTA */}
