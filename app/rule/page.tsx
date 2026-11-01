@@ -5,7 +5,7 @@ import rules from "@/data/rules.json";
 import { OG_IMAGE } from "@/lib/og";
 
 const SITE = "https://garden-reform-navi.com";
-const UPDATED = "2026-10-24";
+const UPDATED = "2026-11-01";
 const GROUPS = ["塀・建物・工作物", "隣地・境界", "道路", "契約・業者・資格", "マンション・賃貸", "工事中の届出・近隣", "農地・土地利用"];
 
 const url = `${SITE}/rule/`;
@@ -64,7 +64,7 @@ export default function RuleIndexPage() {
         <ul className="space-y-1.5 text-sm text-amber-900/90 leading-relaxed">
           <li>条文はe-Gov法令検索で公開されている現行の条文を転記し、各ページに出典リンクを置いています。</li>
           <li>個別の敷地・計画について適法か違法かの判定は行いません。判断は所管の窓口や専門家にご確認ください。</li>
-          <li>自治体ごとに異なる手数料・様式・補助制度の金額は、数値が確認できないため記載していません。</li>
+          <li>自治体ごとに異なる手数料・様式は記載していません。補助・助成制度は、各自治体の公式ページで金額を確認できたものに限り、年度と確認日を添えて下の「自治体の補助・助成制度」に掲載しています。</li>
         </ul>
       </div>
 
@@ -80,6 +80,32 @@ export default function RuleIndexPage() {
           ))}
         </ul>
       </nav>
+
+      <section id="subsidy" className="mb-8 scroll-mt-4">
+        <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-4 border-l-4 border-primary pl-3">自治体の補助・助成制度</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link
+            href="/rule/block-wall-subsidy/"
+            className="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:border-emerald-300 transition-colors"
+          >
+            <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 leading-snug">ブロック塀撤去の補助金一覧</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              政令指定都市20市と東京8区の制度名・補助額・受付状況を、各自治体の公式ページで確認して一覧にしています。
+            </p>
+            <span className="inline-block mt-3 text-sm text-primary font-bold">一覧を見る →</span>
+          </Link>
+          <Link
+            href="/rule/ikegaki-subsidy/"
+            className="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:border-emerald-300 transition-colors"
+          >
+            <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 leading-snug">生垣・緑化の助成制度一覧</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              生垣の新設やブロック塀から生垣への切り替えに使える助成を、自治体の公式ページで確認して一覧にしています。
+            </p>
+            <span className="inline-block mt-3 text-sm text-primary font-bold">一覧を見る →</span>
+          </Link>
+        </div>
+      </section>
 
       {GROUPS.map((g, gi) => (
         <section key={g} id={`g${gi + 1}`} className="mb-8 scroll-mt-4">

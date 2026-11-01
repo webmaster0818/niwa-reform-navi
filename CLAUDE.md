@@ -7,6 +7,7 @@
 - 法令ガイド /rule/ は data/rules.json 駆動。各エントリに group（分野）と updated（最終更新日）を持つ。refs は任意（e-Gov以外の公的出典リンク）
 - 条文は e-Gov 法令API v2（laws.e-gov.go.jp/api/2/law_data/{law_id}?elm=MainProvision-Article_N）で取得し、引用は原文と機械照合してから掲載する
 - 自治体ごとに違う手数料・期間・補助金額は書かない。個別の適法性判定はしない
+  - 2026-11-01 okina 承認で自治体別の助成ページを作成可（金額は公式で確認・年度と確認日を明記）。data/subsidies.json ＋ /rule/block-wall-subsidy/（自治体別は [city]）・/rule/ikegaki-subsidy/。受付終了の制度は「受付終了」と書く
 
 ## 作業ログ
 - 2026-09-25 エリア別比較 3本 → 8本追加（11地方）。companies.json 公式URL誤り5件修正

@@ -60,8 +60,8 @@
   <url><loc>https://garden-reform-navi.com/area/shikoku/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/area/kyushu/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/area/okinawa/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://garden-reform-navi.com/rule/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://garden-reform-navi.com/rule/block-wall/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/kenchiku-kakunin/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/kenpeiritsu/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/rinchi-kyokai/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -90,4 +90,14 @@
   <url><loc>https://garden-reform-navi.com/rule/nouchi-tenyo/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/ryokka-chiiki/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/fuchi-chiku/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/sapporo/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/saitama/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/yokohama/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/nagoya/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/osaka/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/kobe/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/fukuoka/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/setagaya/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/ikegaki-subsidy/</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

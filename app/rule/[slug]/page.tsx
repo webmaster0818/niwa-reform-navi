@@ -207,6 +207,23 @@ export default async function RulePage({ params }: Props) {
         </section>
       ))}
 
+      {rule.slug === "block-wall" && (
+        <div className="bg-white rounded-2xl shadow-sm border border-emerald-200 p-5 mb-6">
+          <h2 className="text-base font-bold text-gray-800 mb-2">撤去・やり替えの補助制度</h2>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            政令指定都市と東京23区の一部について、ブロック塀撤去の補助制度を自治体の公式ページで確認し、
+            <Link href="/rule/block-wall-subsidy/" className="text-primary hover:underline">
+              ブロック塀撤去の補助金一覧
+            </Link>
+            にまとめています。生垣への切り替えは
+            <Link href="/rule/ikegaki-subsidy/" className="text-primary hover:underline">
+              生垣・緑化の助成制度一覧
+            </Link>
+            をご覧ください。
+          </p>
+        </div>
+      )}
+
       {/* Checklist */}
       <section id="checklist" className="bg-bg rounded-2xl p-6 mb-6 scroll-mt-4">
         <h2 className="text-lg font-bold mb-4 text-gray-800">{rule.checklistHeading}</h2>
