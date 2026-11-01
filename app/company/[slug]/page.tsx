@@ -113,6 +113,21 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         </a>
       </div>
 
+      {/* 公式情報にもとづく関連ページ（2026-11-01 追加。エクスショップ・ガーデンプラスのみ） */}
+      {(slug === "ex-shop" || slug === "garden-plus") && (
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 className="text-lg font-bold mb-3 text-gray-800">{company.name}の対応エリア・比較</h2>
+          <ul className="space-y-2 text-sm">
+            {slug === "ex-shop" ? (
+              <li><Link href="/company/ex-shop/area/" className="text-primary underline">エクスショップの施工対応エリア（都道府県別の施工店数）</Link></li>
+            ) : (
+              <li><Link href="/company/garden-plus/shop/" className="text-primary underline">ガーデンプラスの店舗・対応エリア（都道府県別の拠点数）</Link></li>
+            )}
+            <li><Link href="/compare/ex-shop-vs-garden-plus/" className="text-primary underline">エクスショップとガーデンプラスの違い</Link></li>
+          </ul>
+        </div>
+      )}
+
       {/* Other Companies */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
         <h2 className="text-lg font-bold mb-4 text-gray-800">他の業者との比較</h2>
