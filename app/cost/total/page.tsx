@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import works from "@/data/works.json";
+import works, { hasStats } from "@/lib/works";
 
 export const metadata = {
   title: "外構・庭リフォームの費用の確認点まとめ | 庭リフォームナビ",
@@ -30,7 +30,7 @@ export default function CostTotalPage() {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
         <h2 className="text-xl font-bold mb-4 text-gray-800">工事の種類別の工期と難易度</h2>
         <div className="space-y-4">
-          {works.map((work) => (
+          {works.filter(hasStats).map((work) => (
             <div key={work.slug} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
               <div className="flex items-center justify-between mb-2">
                 <Link href={`/work/${work.slug}/`} className="font-bold text-primary hover:underline">{work.title}</Link>

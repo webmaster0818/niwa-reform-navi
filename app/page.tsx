@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import companies from "@/data/companies.json";
-import works from "@/data/works.json";
+import works, { hasStats } from "@/lib/works";
 
 export const metadata = {
   alternates: { canonical: "/" },
@@ -104,7 +104,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             工事の種類から探す
           </h2>
-          <p className="text-sm text-gray-500">工事の種類ごとに工期・注意点・費用の目安と出典を掲載しています</p>
+          <p className="text-sm text-gray-500">工事の種類ごとに、工期・注意点・費用の目安やメーカー公式の仕様を出典とともに掲載しています</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {works.map((work) => (
@@ -213,7 +213,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {works.map((work, i) => (
+              {works.filter(hasStats).map((work, i) => (
                 <tr
                   key={work.slug}
                   className={`border-b border-gray-50 hover:bg-emerald-50/50 transition-colors ${

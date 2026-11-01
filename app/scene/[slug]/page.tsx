@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import scenes from "@/data/scenes.json";
 import companies from "@/data/companies.json";
-import works from "@/data/works.json";
+import works from "@/lib/works";
 
 export async function generateStaticParams() {
   return scenes.map((s) => ({ slug: s.slug }));

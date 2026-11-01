@@ -236,7 +236,9 @@
     ],
     "relatedWorks": [
       "carport",
-      "garden-room"
+      "garden-room",
+      "storage",
+      "terrace-roof"
     ],
     "faqs": [
       {
@@ -361,7 +363,8 @@
     ],
     "relatedWorks": [
       "carport",
-      "garden-room"
+      "garden-room",
+      "terrace-roof"
     ],
     "faqs": [
       {
@@ -478,7 +481,8 @@
     "relatedWorks": [
       "fence",
       "wood-deck",
-      "gate"
+      "gate",
+      "storage"
     ],
     "faqs": [
       {
@@ -2129,7 +2133,9 @@
       "carport",
       "garden-room",
       "gate",
-      "fence"
+      "fence",
+      "storage",
+      "terrace-roof"
     ],
     "faqs": [
       {

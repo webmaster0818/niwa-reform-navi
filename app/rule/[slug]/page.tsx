@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import rules from "@/data/rules.json";
-import works from "@/data/works.json";
+import works, { type Work } from "@/lib/works";
 import { OG_IMAGE } from "@/lib/og";
 
 const SITE = "https://garden-reform-navi.com";
@@ -39,7 +39,7 @@ export default async function RulePage({ params }: Props) {
   const otherGroups = rules.filter((r) => r.group !== rule.group);
   const related = rule.relatedWorks
     .map((w) => works.find((x) => x.slug === w))
-    .filter((w): w is (typeof works)[number] => Boolean(w));
+    .filter((w): w is Work => Boolean(w));
 
   const toc = [
     { id: "laws", label: "根拠となる条文" },
@@ -234,7 +234,7 @@ export default async function RulePage({ params }: Props) {
                 className="bg-bg rounded-xl p-4 hover:bg-emerald-100 transition-colors"
               >
                 <div className="font-bold text-gray-800 mb-1">{w.title}</div>
-                <div className="text-xs text-gray-500">工期の目安 {w.duration}</div>
+                <div className="text-xs text-gray-500">{w.duration ? `工期の目安 ${w.duration}` : "メーカー公式の仕様と設置方法"}</div>
               </Link>
             ))}
           </div>

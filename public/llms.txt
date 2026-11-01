@@ -32,6 +32,10 @@
   - 農地を庭や駐車場にする場合の農地転用: https://garden-reform-navi.com/rule/nouchi-tenyo/
   - 緑化地域の緑化率と外構工事: https://garden-reform-navi.com/rule/ryokka-chiiki/
   - 風致地区での外構・庭工事の許可: https://garden-reform-navi.com/rule/fuchi-chiku/
+- 工事の種類（メーカー公式の仕様・設置方法を出典つきで掲載）:
+  - 物置の設置工事: https://garden-reform-navi.com/work/storage/
+  - 宅配ボックスの設置: https://garden-reform-navi.com/work/delivery-box/
+  - テラス屋根の設置: https://garden-reform-navi.com/work/terrace-roof/
 - エリア別ガイド: https://garden-reform-navi.com/area/kanto/ ほか10地方
 - 業者の口コミ・評判: https://garden-reform-navi.com/review/
 - サイトマップ: https://garden-reform-navi.com/sitemap.xml
@@ -44,4 +48,4 @@
 
 ## 最終更新
 
-2026-10-17
+2026-11-01

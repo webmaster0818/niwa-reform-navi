@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import works from "@/data/works.json";
+import works from "@/lib/works";
+import InlineLinks from "@/components/InlineLinks";
 import companies from "@/data/companies.json";
 import rules from "@/data/rules.json";
 
@@ -13,6 +14,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const work = works.find((w) => w.slug === slug);
   if (!work) return {};
+  if (work.guide) {
+    return {
+      title: work.guide.metaTitle,
+      description: work.guide.metaDescription,
+      alternates: { canonical: `/work/${work.slug}/` },
+    };
+  }
   return {
     title: `${work.title}の費用相場・業者選び | 庭リフォームナビ`,
     description: `${work.title}の費用相場（掲載サービスの記事に記載された金額と出典）、工期、注意点、おすすめ業者を解説しています。`,
@@ -27,6 +35,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
 
   const recommendedComps = companies.filter((c) => work.recommendedCompanies.includes(c.slug));
   const relatedRules = rules.filter((r) => r.relatedWorks.includes(work.slug));
+  const guide = work.guide;
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -37,11 +46,70 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
 
       {/* Header */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{work.title}の費用相場・業者選びガイド</h1>
-        <p className="text-gray-600 leading-relaxed">{work.description}</p>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{guide ? guide.h1 : `${work.title}の費用相場・業者選びガイド`}</h1>
+        <p className="text-gray-600 leading-relaxed">{guide ? guide.lead : work.description}</p>
+        {guide && (
+          <p className="text-xs text-gray-500 mt-3">各メーカーの公式サイトの記載を{guide.checked}に確認しています。製品の仕様は変更されることがあるため、購入・発注の前に最新のカタログで確認してください。</p>
+        )}
       </div>
 
+      {/* Guide sections（メーカー公式の記載） */}
+      {guide && guide.sections.map((sec, si) => (
+        <section key={si} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 className="text-lg font-bold mb-4 text-gray-800">{sec.heading}</h2>
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            {sec.blocks.map((b, bi) => {
+              if ("p" in b) return <p key={bi}><InlineLinks text={b.p} /></p>;
+              if ("list" in b)
+                return (
+                  <ul key={bi} className="list-disc pl-5 space-y-2">
+                    {b.list.map((item, li) => <li key={li}><InlineLinks text={item} /></li>)}
+                  </ul>
+                );
+              return (
+                <div key={bi} className="overflow-x-auto">
+                  <table className="w-full text-sm border border-gray-200 min-w-[480px]">
+                    <thead>
+                      <tr className="bg-bg">
+                        {b.table.columns.map((c) => (
+                          <th key={c} className="text-left px-3 py-2 border-b border-gray-200 font-semibold text-gray-800 whitespace-nowrap">{c}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {b.table.rows.map((row, ri) => (
+                        <tr key={ri} className="border-b border-gray-100 last:border-0 align-top">
+                          {row.map((cell, ci) => (
+                            <td key={ci} className={`px-3 py-2 ${ci === 0 ? "font-medium text-gray-800" : "text-gray-700"}`}>{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
+          </div>
+          {sec.sources.length > 0 && (
+            <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+              出典（{guide.checked}確認）：
+              {sec.sources.map((l, li) => (
+                <span key={l.url}>
+                  {li > 0 && "、"}
+                  {l.url.startsWith("/") ? (
+                    <Link href={l.url} className="text-primary hover:underline">{l.label}</Link>
+                  ) : (
+                    <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{l.label}</a>
+                  )}
+                </span>
+              ))}
+            </p>
+          )}
+        </section>
+      ))}
+
       {/* Quick Stats */}
+      {work.duration && work.difficulty && (
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-secondary text-white rounded-xl p-4 text-center">
           <div className="text-xs mb-1 text-amber-100">工期</div>
@@ -52,8 +120,10 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
           <div className="font-bold text-gray-800 text-sm">{work.difficulty}</div>
         </div>
       </div>
+      )}
 
       {/* Tips */}
+      {work.tips && work.tips.length > 0 && (
       <div className="bg-bg rounded-2xl p-6 mb-6">
         <h2 className="text-lg font-bold mb-4 text-gray-800">工事の要点・注意点</h2>
         <ul className="space-y-3">
@@ -65,6 +135,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
           ))}
         </ul>
       </div>
+      )}
 
       {/* Recommended Companies */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
@@ -124,8 +195,8 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
               </summary>
               <div className="px-4 pb-3 pt-2 text-sm text-gray-600 border-t border-gray-100">
                 <span className="text-secondary font-bold mr-1">A</span>
-                {faq.answer}
-                {"source" in faq && faq.source && (
+                <InlineLinks text={faq.answer} />
+                {faq.source && (
                   <p className="mt-2 text-xs text-gray-500 leading-relaxed">
                     出典：{faq.source.text}
                     {faq.source.links.map((l) => (
