@@ -21,6 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       alternates: { canonical: `/work/${work.slug}/` },
     };
   }
+  if (work.meta) {
+    return {
+      title: work.meta.title,
+      description: work.meta.description,
+      alternates: { canonical: `/work/${work.slug}/` },
+    };
+  }
   return {
     title: `${work.title}の費用相場・業者選び | 庭リフォームナビ`,
     description: `${work.title}の費用相場（掲載サービスの記事に記載された金額と出典）、工期、注意点、おすすめ業者を解説しています。`,
@@ -46,12 +53,32 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
 
       {/* Header */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{guide ? guide.h1 : `${work.title}の費用相場・業者選びガイド`}</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{guide ? guide.h1 : work.meta ? work.meta.h1 : `${work.title}の費用相場・業者選びガイド`}</h1>
         <p className="text-gray-600 leading-relaxed">{guide ? guide.lead : work.description}</p>
         {guide && (
           <p className="text-xs text-gray-500 mt-3">各メーカーの公式サイトの記載を{guide.checked}に確認しています。製品の仕様は変更されることがあるため、購入・発注の前に最新のカタログで確認してください。</p>
         )}
       </div>
+
+      {/* 費用の答え（出典の記載どおり） */}
+      {work.costAnswer && (
+        <section className="bg-white rounded-2xl shadow-sm border border-primary p-6 mb-6">
+          <h2 className="text-lg font-bold mb-3 text-gray-800">{work.costAnswer.heading}</h2>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 leading-relaxed">
+            {work.costAnswer.items.map((item, i) => <li key={i}><InlineLinks text={item} /></li>)}
+          </ul>
+          <p className="mt-3 text-sm text-gray-700 leading-relaxed"><InlineLinks text={work.costAnswer.note} /></p>
+          <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+            出典（{work.costAnswer.checked}確認）：
+            {work.costAnswer.sources.map((l, li) => (
+              <span key={l.url}>
+                {li > 0 && "、"}
+                <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{l.label}</a>
+              </span>
+            ))}
+          </p>
+        </section>
+      )}
 
       {/* Guide sections（メーカー公式の記載） */}
       {guide && guide.sections.map((sec, si) => (

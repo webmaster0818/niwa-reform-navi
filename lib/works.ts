@@ -29,6 +29,21 @@ export type WorkGuide = {
   sections: GuideSection[];
 };
 
+// 費用相場ページの冒頭に置く答え（出典の記載どおりの値だけ）
+export type WorkCostAnswer = {
+  heading: string;
+  items: string[];
+  note: string;
+  checked: string;
+  sources: SourceLink[];
+};
+
+export type WorkMeta = {
+  title: string;
+  description: string;
+  h1: string;
+};
+
 export type Work = {
   slug: string;
   title: string;
@@ -39,6 +54,8 @@ export type Work = {
   recommendedCompanies: string[];
   faqs: WorkFaq[];
   guide?: WorkGuide;
+  meta?: WorkMeta;
+  costAnswer?: WorkCostAnswer;
 };
 
 export type WorkWithStats = Work & { duration: string; difficulty: string };
