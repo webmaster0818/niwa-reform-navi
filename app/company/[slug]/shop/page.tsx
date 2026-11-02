@@ -216,7 +216,7 @@ export default async function GardenPlusShopPage({ params }: { params: Promise<{
       <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
         <h2 className="text-lg font-bold mb-3 text-gray-800">関連ページ</h2>
         <ul className="space-y-2 text-sm">
-          <li><Link href="/company/garden-plus/" className="text-primary underline">ガーデンプラスの口コミ・評判・特徴</Link></li>
+          <li><Link href="/company/garden-plus/" className="text-primary underline">ガーデンプラスの特徴・メリット・デメリット</Link></li>
           <li><Link href="/compare/ex-shop-vs-garden-plus/" className="text-primary underline">エクスショップとガーデンプラスの違い</Link></li>
           <li><Link href="/company/ex-shop/area/" className="text-primary underline">エクスショップの施工対応エリア</Link></li>
         </ul>

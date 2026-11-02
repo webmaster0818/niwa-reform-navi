@@ -2,6 +2,15 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
+import reviewPages from "@/data/reviews.json";
+
+// このページの本文に口コミ（出典つき）を載せている社だけ、title に「口コミ・評判」を入れる。
+// 2026-11-03 時点ではどの社も本文に口コミが無いため、全社「特徴・メリット・デメリット」になる。
+// 口コミは /review/{slug}/ に出典つきでまとめている。
+function hasSourcedReviews(company: unknown): boolean {
+  const r = (company as { reviews?: unknown[] }).reviews;
+  return Array.isArray(r) && r.length > 0;
+}
 
 export async function generateStaticParams() {
   return companies.map((c) => ({ slug: c.slug }));
@@ -12,7 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const company = companies.find((c) => c.slug === slug);
   if (!company) return {};
   return {
-    title: `${company.name}の口コミ・評判・特徴 | 庭リフォームナビ`,
+    title: hasSourcedReviews(company)
+      ? `${company.name}の口コミ・評判・特徴 | 庭リフォームナビ`
+      : `${company.name}の特徴・メリット・デメリット | 庭リフォームナビ`,
     description: `${company.name}の特徴・メリット・デメリットを解説しています。${company.tagline}。`,
     alternates: { canonical: `/company/${company.slug}/` },
   };
@@ -24,6 +35,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
   if (!company) notFound();
 
   const rank = companies.findIndex((c) => c.slug === slug) + 1;
+  const reviewPage = (reviewPages as { slug: string }[]).find((r) => r.slug === slug);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -101,6 +113,14 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         </div>
         )}
       </div>
+
+      {reviewPage && (
+        <p className="text-sm text-gray-700 mb-6">
+          {company.name}の口コミ・評判は、出典つきで
+          <Link href={`/review/${slug}/`} className="text-primary underline">{company.name}の評判（別ページ）</Link>
+          にまとめています。
+        </p>
+      )}
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-accent to-blue-700 rounded-2xl p-8 text-white text-center mb-6">

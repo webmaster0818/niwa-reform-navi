@@ -207,9 +207,9 @@ export default function CompareExShopGardenPlusPage() {
       <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
         <h2 className="text-lg font-bold mb-3 text-gray-800">関連ページ</h2>
         <ul className="space-y-2 text-sm">
-          <li><Link href="/company/ex-shop/" className="text-primary underline">エクスショップの口コミ・評判・特徴</Link></li>
+          <li><Link href="/company/ex-shop/" className="text-primary underline">エクスショップの特徴・メリット・デメリット</Link></li>
           <li><Link href="/company/ex-shop/area/" className="text-primary underline">エクスショップの施工対応エリア（都道府県別の施工店数）</Link></li>
-          <li><Link href="/company/garden-plus/" className="text-primary underline">ガーデンプラスの口コミ・評判・特徴</Link></li>
+          <li><Link href="/company/garden-plus/" className="text-primary underline">ガーデンプラスの特徴・メリット・デメリット</Link></li>
           <li><Link href="/company/garden-plus/shop/" className="text-primary underline">ガーデンプラスの店舗・対応エリア</Link></li>
           <li><Link href="/ranking/cheap/" className="text-primary underline">外構工事の費用を抑える方法と見積もりの確認点</Link></li>
         </ul>
