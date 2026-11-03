@@ -137,6 +137,27 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         </a>
       </div>
 
+      {/* ガーデンプラス公式トップで確認した事実（2026-11-04 追加。trust-audit C7 対応。原文の表示を確認したものだけ） */}
+      {slug === "garden-plus" && (
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+          <h2 className="text-lg font-bold mb-3 text-gray-800">公式サイトで確認できる施工事例と工事メニュー</h2>
+          <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+            <p>
+              ガーデンプラスの公式サイトのトップページには「施工事例 29818 件掲載中」と表示されています。施工事例は、トップページの「外構メニューから探す」にある次の12の区分から探せます。
+            </p>
+            <p>
+              駐車スペース・車庫／駐輪スペース・自転車置き場／門柱・門まわり／ブロック塀・デザイン塀／アプローチ／境界・外周／デッキ・テラス／庭／花壇・植栽スペース／勝手口まわり・収納／犬走り／土留め・法面
+            </p>
+            <p>
+              掲載件数は増減するため、最新の数は公式サイトでご確認ください。
+            </p>
+            <p className="text-xs text-gray-500">
+              出典：<a href="https://www.garden.ne.jp/" target="_blank" rel="noopener noreferrer" className="underline">エクステリア外構工事を激安で提案 | 外構工事のガーデンプラス</a>（2026年11月4日確認）
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* 公式情報にもとづく関連ページ（2026-11-01 追加。エクスショップ・ガーデンプラスのみ） */}
       {(slug === "ex-shop" || slug === "garden-plus") && (
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
