@@ -41,9 +41,6 @@ const faqLd = {
   mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
-const medals = ["", "", ""];
-const medalColors = ["bg-yellow-500", "bg-gray-400", "bg-amber-600"];
-
 export default function RankingPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -53,7 +50,7 @@ export default function RankingPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
           外構・庭リフォーム業者の比較ランキング
         </h1>
-        <p className="text-gray-600">編集部が選んだ外構・庭リフォームの依頼先10社を、総合評価に基づき順位を付けています</p>
+        <p className="text-gray-600">外構・庭リフォームの依頼先10社をまとめています。並びは掲載順で、評価による順位ではありません</p>
       </div>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
@@ -84,11 +81,11 @@ export default function RankingPage() {
       {/* Ranking List */}
       <div className="space-y-4">
         {companies.map((company, i) => (
-          <div key={company.slug} className={`bg-white rounded-2xl shadow-sm border ${i < 3 ? "border-primary" : "border-gray-100"} p-6`}>
+          <div key={company.slug} className={`bg-white rounded-2xl shadow-sm border border-gray-100 p-6`}>
             <div className="flex items-start gap-4">
               <div className="shrink-0 text-center">
-                <span className={`text-white text-sm font-bold px-3 py-1.5 rounded-xl inline-block ${i < 3 ? medalColors[i] : "bg-gray-300"}`}>
-                  {i < 3 ? medals[i] : `${i + 1}位`}
+                <span className={`text-white text-sm font-bold px-3 py-1.5 rounded-xl inline-block bg-gray-400`}>
+                  {`掲載順 ${i + 1}`}
                 </span>
               </div>
               <div className="flex-1">
