@@ -116,7 +116,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
 
       {reviewPage && (
         <p className="text-sm text-gray-700 mb-6">
-          {company.name}の口コミ・評判は、出典つきで
+          {company.name}の口コミ・評判は、
           <Link href={`/review/${slug}/`} className="text-primary underline">{company.name}の評判（別ページ）</Link>
           にまとめています。
         </p>
