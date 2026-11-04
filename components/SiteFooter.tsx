@@ -14,7 +14,7 @@ export default function SiteFooter() {
             </p>
           </div>
           <div>
-            <h4 className="font-bold mb-3 text-amber-200">業者ランキング</h4>
+            <h4 className="font-bold mb-3 text-amber-200">外構業者の比較</h4>
             <ul className="space-y-2 text-sm text-amber-100">
               <li><Link href="/ranking/" className="hover:text-white transition-colors">外構業者の比較</Link></li>
               <li><Link href="/ranking/cheap/" className="hover:text-white transition-colors">外構費用を抑える方法</Link></li>

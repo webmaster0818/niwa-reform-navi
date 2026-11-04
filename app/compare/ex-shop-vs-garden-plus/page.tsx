@@ -102,7 +102,7 @@ export default function CompareExShopGardenPlusPage() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb items={[
-        { label: "ランキング", href: "/ranking/" },
+        { label: "外構業者の比較", href: "/ranking/" },
         { label: "エクスショップとガーデンプラスの違い" },
       ]} />
 

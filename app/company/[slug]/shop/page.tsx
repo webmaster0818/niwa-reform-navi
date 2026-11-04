@@ -82,7 +82,7 @@ export default async function GardenPlusShopPage({ params }: { params: Promise<{
     <div className="max-w-4xl mx-auto px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb items={[
-        { label: "ランキング", href: "/ranking/" },
+        { label: "外構業者の比較", href: "/ranking/" },
         { label: "ガーデンプラス", href: "/company/garden-plus/" },
         { label: "店舗・対応エリア" },
       ]} />

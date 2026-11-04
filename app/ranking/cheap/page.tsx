@@ -121,7 +121,7 @@ export default function CheapPage() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb items={[
-        { label: "ランキング", href: "/ranking/" },
+        { label: "外構業者の比較", href: "/ranking/" },
         { label: "外構工事の費用を抑える方法" },
       ]} />
 
@@ -219,7 +219,7 @@ export default function CheapPage() {
       </section>
 
       <div className="text-center">
-        <Link href="/ranking/" className="text-primary font-bold hover:underline">← 総合ランキングに戻る</Link>
+        <Link href="/ranking/" className="text-primary font-bold hover:underline">← 外構業者の比較に戻る</Link>
       </div>
     </div>
   );

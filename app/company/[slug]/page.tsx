@@ -40,7 +40,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb items={[
-        { label: "ランキング", href: "/ranking/" },
+        { label: "外構業者の比較", href: "/ranking/" },
         { label: company.name },
       ]} />
 

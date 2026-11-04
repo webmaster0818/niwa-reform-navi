@@ -14,7 +14,7 @@ export default function SiteHeader() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="/ranking/" className="text-gray-700 hover:text-primary transition-colors">ランキング</Link>
+          <Link href="/ranking/" className="text-gray-700 hover:text-primary transition-colors">比較</Link>
           <Link href="/work/wood-deck/" className="text-gray-700 hover:text-primary transition-colors">工事の種類</Link>
           <Link href="/cost/total/" className="text-gray-700 hover:text-primary transition-colors">費用相場</Link>
           <Link href="/scene/new-house/" className="text-gray-700 hover:text-primary transition-colors">シーン別</Link>
@@ -43,7 +43,7 @@ export default function SiteHeader() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 text-sm font-medium">
-          <Link href="/ranking/" className="text-gray-700" onClick={() => setMenuOpen(false)}>ランキング</Link>
+          <Link href="/ranking/" className="text-gray-700" onClick={() => setMenuOpen(false)}>比較</Link>
           <Link href="/work/wood-deck/" className="text-gray-700" onClick={() => setMenuOpen(false)}>工事の種類</Link>
           <Link href="/cost/total/" className="text-gray-700" onClick={() => setMenuOpen(false)}>費用相場</Link>
           <Link href="/scene/new-house/" className="text-gray-700" onClick={() => setMenuOpen(false)}>シーン別</Link>
