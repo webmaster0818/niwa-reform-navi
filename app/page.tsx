@@ -87,7 +87,7 @@ export default function Home() {
               href="/ranking/"
               className="bg-white/15 backdrop-blur-sm border-2 border-white/60 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/25 transition-all shadow-lg hover:-translate-y-0.5"
             >
-              業者ランキングを見る
+              外構業者の比較を見る
             </Link>
           </div>
           {/* Trust badges */}
@@ -189,7 +189,7 @@ export default function Home() {
               href="/ranking/"
               className="inline-flex items-center gap-2 text-primary font-bold hover:underline text-sm"
             >
-              全10社のランキングを見る →
+              全10社の比較を見る →
             </Link>
           </div>
         </div>

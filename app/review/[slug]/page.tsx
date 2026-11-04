@@ -242,7 +242,7 @@ export default async function ReviewPage({ params }: Props) {
 
       <div className="mt-8 flex flex-wrap gap-4 text-sm">
         <Link href="/review/" className="text-primary hover:underline">他の業者の口コミ・評判</Link>
-        <Link href="/ranking/" className="text-primary hover:underline">外構・庭リフォーム業者ランキング</Link>
+        <Link href="/ranking/" className="text-primary hover:underline">外構・庭リフォーム業者の比較</Link>
       </div>
     </article>
   );

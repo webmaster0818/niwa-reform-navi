@@ -61,7 +61,7 @@ export default function ContentPolicyPage() {
             ただし、編集コンテンツと広告は明確に分離しています。
           </p>
           <ul className="list-disc list-inside space-y-2 pl-2">
-            <li>ランキングや評価は、広告費用・掲載料に影響されません</li>
+            <li>掲載順や評価は、広告費用・掲載料に影響されません</li>
             <li>PR・広告表示がある箇所は明示しています</li>
             <li>編集部は広告主から独立した基準で評価を行います</li>
             <li>利用者にとって不利益な情報も省略せずに記載します</li>
@@ -105,7 +105,7 @@ export default function ContentPolicyPage() {
         <div className="text-sm text-gray-500 pt-4 border-t border-gray-100">
           <p>運営者: 株式会社MediaX</p>
           <p>制定日: 2025年1月1日</p>
-          <p>最終改訂: 2026年10月18日</p>
+          <p>最終改訂: 2026年11月4日</p>
         </div>
       </div>
     </div>

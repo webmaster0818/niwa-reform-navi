@@ -190,7 +190,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         </div>
         <div className="text-center mt-4">
           <Link href="/ranking/" className="text-primary text-sm font-bold hover:underline">
-            全10社のランキングを見る →
+            全10社の比較を見る →
           </Link>
         </div>
       </div>
