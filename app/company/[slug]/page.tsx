@@ -49,7 +49,8 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
         <div className="flex items-start justify-between mb-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="bg-primary text-white text-xs font-bold px-2 py-1 rounded">総合 {rank}位</span>
+              {/* 2026-11-04 okina 判断20：ガーデンプラスは「総合 n位」を出さない（/ranking/ は 11/3 から掲載順で、評価による順位ではない） */}
+              {slug !== "garden-plus" && <span className="bg-primary text-white text-xs font-bold px-2 py-1 rounded">総合 {rank}位</span>}
               <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">対応エリア: {company.coverage}</span>
             </div>
             <h1 className="text-2xl font-bold text-gray-900">{company.name}</h1>

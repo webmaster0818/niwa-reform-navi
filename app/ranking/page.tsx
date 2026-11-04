@@ -3,9 +3,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import companies from "@/data/companies.json";
 
 export const metadata = {
-  title: "外構・庭リフォーム業者の比較ランキング｜一括見積もりサービスと外構会社10社の違い | 庭リフォームナビ",
+  title: "外構・庭リフォーム業者の比較｜一括見積もりサービスと外構会社10社の違い | 庭リフォームナビ",
   description:
-    "外構・庭リフォームの依頼先10社を比較したランキングです。複数社の見積もりを取り寄せる一括見積もり・紹介サービスと、自社で販売・施工する外構会社の違い、外構・エクステリアパートナーズの仕組み、建設業許可の確認方法を、各社公式サイトと国土交通省の情報（2026年10月22日確認）をもとに整理しています。",
+    "外構・庭リフォームの依頼先10社を比較しています。複数社の見積もりを取り寄せる一括見積もり・紹介サービスと、自社で販売・施工する外構会社の違い、外構・エクステリアパートナーズの仕組み、建設業許可の確認方法を、各社公式サイトと国土交通省の情報（2026年10月22日確認）をもとに整理しています。",
   alternates: { canonical: "/ranking/" },
 };
 
@@ -48,7 +48,7 @@ export default function RankingPage() {
 
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-          外構・庭リフォーム業者の比較ランキング
+          外構・庭リフォーム業者の比較
         </h1>
         <p className="text-gray-600">外構・庭リフォームの依頼先10社をまとめています。並びは掲載順で、評価による順位ではありません</p>
       </div>
