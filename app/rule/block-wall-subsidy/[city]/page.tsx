@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
-import { blockWall, blockWallPages } from "@/lib/subsidies";
+import { blockWall, blockWallPages, ikegakiPages } from "@/lib/subsidies";
 import { OG_IMAGE } from "@/lib/og";
 
 const SITE = "https://garden-reform-navi.com";
@@ -34,6 +34,7 @@ export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const p = s.page;
   const url = `${SITE}${HUB}${s.slug}/`;
   const others = blockWallPages.filter((x) => x.slug !== s.slug);
+  const ik = ikegakiPages.find((x) => x.slug === s.slug);
 
   const toc = [
     { id: "overview", label: "制度の概要" },
@@ -273,6 +274,14 @@ export default async function BlockWallSubsidyCityPage({ params }: Props) {
         </ul>
         <p className="text-sm text-gray-600 mt-4">
           撤去した塀の代わりに生垣をつくる場合の助成は、
+          {ik && (
+            <>
+              <Link href={`/rule/ikegaki-subsidy/${ik.slug}/`} className="text-primary hover:underline">
+                {ik.name}の{ik.programName}
+              </Link>
+              と
+            </>
+          )}
           <Link href="/rule/ikegaki-subsidy/" className="text-primary hover:underline">
             生垣・緑化の助成制度一覧
           </Link>

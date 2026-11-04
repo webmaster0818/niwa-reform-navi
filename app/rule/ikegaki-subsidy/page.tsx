@@ -19,6 +19,7 @@ export default function IkegakiSubsidyPage() {
       hub={ikegaki}
       path={PATH}
       name="生垣・緑化の助成制度一覧"
+      childPath={PATH}
       related={[
         { href: "/rule/block-wall-subsidy/", label: "ブロック塀撤去の補助金一覧", note: "政令指定都市20市・東京8区の制度と上限額" },
         { href: "/rule/ryokka-chiiki/", label: "緑化地域と緑化率", note: "敷地の緑化が義務になる地域の決まり" },

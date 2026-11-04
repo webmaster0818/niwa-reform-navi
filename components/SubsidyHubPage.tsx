@@ -8,7 +8,7 @@ type Props = {
   hub: SubsidyHub;
   path: string; // 例: /rule/block-wall-subsidy/
   name: string; // パンくず表示名
-  childPath?: string; // 自治体別ページのパス（ブロック塀のみ）
+  childPath?: string; // 自治体別ページのパス（自治体別ページを持つ一覧のみ）
   related: { href: string; label: string; note: string }[];
 };
 

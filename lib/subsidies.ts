@@ -55,4 +55,5 @@ const d = data as unknown as { blockWall: SubsidyHub; ikegaki: SubsidyHub };
 export const blockWall = d.blockWall;
 export const ikegaki = d.ikegaki;
 export const blockWallPages = blockWall.items.filter((s) => s.page);
+export const ikegakiPages = ikegaki.items.filter((s) => s.page);
 export const KINDS = ["政令指定都市", "東京23区"] as const;
