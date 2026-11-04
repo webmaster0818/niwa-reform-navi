@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import GrLogo from "@/components/top/GrLogo";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,8 +9,8 @@ export default function SiteHeader() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-primary"> 庭リフォームナビ</span>
+        <Link href="/" className="flex items-center gap-2" aria-label="庭リフォームナビ トップページ">
+          <GrLogo />
         </Link>
 
         {/* Desktop Nav */}

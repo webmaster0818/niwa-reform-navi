@@ -1,6 +1,7 @@
 import Link from "next/link";
 import areas from "@/data/areas.json";
 import rules from "@/data/rules.json";
+import GrLogo from "@/components/top/GrLogo";
 
 export default function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export default function SiteFooter() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4"> 庭リフォームナビ</h3>
+            <h3 className="mb-4"><GrLogo tone="light" size={32} /></h3>
             <p className="text-sm text-amber-100 leading-relaxed">
               庭・外構リフォームの費用相場、業者比較、見積もりに関する情報を発信する専門メディアです。
             </p>

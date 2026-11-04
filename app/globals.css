@@ -35,3 +35,83 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* ======================================================================
+ * TOP 刷新（2026-11-04・redesign-20261104 ブランチ）
+ * 板張りのスレート（--gr-slate）を基調に、シーダー（--gr-cedar）を差し色に使う。
+ * 背景は生成り色、区切りははっきりした枠線。グラデーション・大きな角丸・影の多用はしない。
+ * ====================================================================== */
+:root {
+  --gr-ink: #1E2629;
+  --gr-slate: #2C4148;
+  --gr-slate-dark: #1F3036;
+  --gr-cedar: #A4582B;
+  --gr-cedar-dark: #874620;
+  --gr-wash: #EEF1F1;
+  --gr-paper: #F5F3EF;
+  --gr-border: #D3D6D4;
+  --gr-border-strong: #9AA4A6;
+  --gr-muted: #4F5A5E;
+}
+
+@layer components {
+.gr-page { background: var(--gr-paper); color: var(--gr-ink); font-feature-settings: "palt" 1; margin-bottom: -4rem; padding-bottom: 4rem; }
+.gr-page a { -webkit-tap-highlight-color: transparent; }
+.gr-page :focus-visible { outline: 3px solid #6E8F98; outline-offset: 2px; }
+
+.gr-container { max-width: 1160px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+@media (min-width: 768px) { .gr-container { padding-left: 24px; padding-right: 24px; } }
+
+/* 統一ボタン（主導線はスレート1色、見積もりはシーダー） */
+.gr-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  min-height: 52px; padding: 0.8rem 1.4rem; border-radius: 3px;
+  background: var(--gr-slate); color: #fff; border: 1px solid var(--gr-slate);
+  font-weight: 700; letter-spacing: 0.04em; line-height: 1.35; text-align: center;
+  transition: background-color .2s ease;
+}
+.gr-btn:hover { background: var(--gr-slate-dark); }
+.gr-btn--lg { min-height: 64px; font-size: 17px; padding: 0.9rem 1.4rem; }
+@media (min-width: 768px) { .gr-btn--lg { min-height: 72px; font-size: 18px; white-space: nowrap; } }
+.gr-btn--ghost { background: #fff; color: var(--gr-slate); border-color: var(--gr-slate); }
+.gr-btn--ghost:hover { background: var(--gr-wash); }
+.gr-btn--cedar { background: var(--gr-cedar); border-color: var(--gr-cedar); }
+.gr-btn--cedar:hover { background: var(--gr-cedar-dark); }
+.gr-pr { display: inline-block; font-size: 11px; line-height: 1; padding: 3px 5px; border: 1px solid currentColor; font-weight: 700; letter-spacing: 0.04em; }
+
+/* 枠 */
+.gr-card { background: #fff; border: 1px solid var(--gr-border); border-radius: 3px; }
+.gr-card-link { transition: border-color .2s ease, background-color .2s ease; }
+.gr-card-link:hover { border-color: var(--gr-slate); background: #FBFBFA; }
+
+/* 見出し：左寄せ＋下罫線。英字ラベルは使わない */
+.gr-h2 {
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 24px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.4;
+  padding-bottom: 12px; border-bottom: 2px solid var(--gr-ink); margin-bottom: 24px;
+}
+@media (min-width: 768px) { .gr-h2 { font-size: 30px; margin-bottom: 32px; } }
+.gr-h2 small { font-size: 13px; font-weight: 500; color: var(--gr-muted); letter-spacing: 0.02em; line-height: 1.6; }
+
+.gr-section { padding: 56px 0; }
+@media (min-width: 768px) { .gr-section { padding: 88px 0; } }
+.gr-band { background: #fff; border-top: 1px solid var(--gr-border); border-bottom: 1px solid var(--gr-border); }
+
+/* 箇条の印（✓の代わりに小さな四角） */
+.gr-dot { position: relative; padding-left: 14px; }
+.gr-dot::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--gr-cedar); }
+
+/* details */
+.gr-acc > summary { list-style: none; cursor: pointer; }
+.gr-acc > summary::-webkit-details-marker { display: none; }
+.gr-acc[open] > summary .gr-chev { transform: rotate(180deg); }
+.gr-chev { transition: transform .25s ease; }
+}
+
+/* スクロールで順に表示（JS 実行後に html.gr-js を付ける。JS 無効・印刷・reduced-motion では常に表示） */
+.gr-js .gr-reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.gr-js .gr-reveal.gr-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .gr-js .gr-reveal { opacity: 1; transform: none; transition: none; }
+}
+@media print { .gr-js .gr-reveal { opacity: 1 !important; transform: none !important; } }
