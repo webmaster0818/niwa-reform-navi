@@ -44,7 +44,7 @@ const faqLd = {
 export default function RankingPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Breadcrumb items={[{ label: "外構業者ランキング" }]} />
+      <Breadcrumb items={[{ label: "外構業者の比較" }]} />
 
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
@@ -57,7 +57,7 @@ export default function RankingPage() {
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8 text-sm text-gray-700 leading-relaxed space-y-3">
         <p>
-          外構や庭のリフォームの依頼先は、大きく二つに分かれます。一つは、複数の施工業者から見積もりを集める一括見積もり・紹介サービスで、本ランキングではタウンライフエクステリア、リショップナビ、外構・エクステリアパートナーズなどが当たります。もう一つは、見積もりから施工までを自社で担う外構会社で、エクスショップなどが当たります。
+          外構や庭のリフォームの依頼先は、大きく二つに分かれます。一つは、複数の施工業者から見積もりを集める一括見積もり・紹介サービスで、本ページではタウンライフエクステリア、リショップナビ、外構・エクステリアパートナーズなどが当たります。もう一つは、見積もりから施工までを自社で担う外構会社で、エクスショップなどが当たります。
         </p>
         <p>
           同じ工事でも、業者によって見積もりの金額や内訳は異なります。依頼先が決まっていない場合は、一括見積もりサービスで複数社の見積もりを比べると、金額と工事内容の違いを確認しやすくなります。依頼する業者が建設業の許可を持っているかは、国土交通省の検索システムで確認できます（下記「よくある質問」参照）。
