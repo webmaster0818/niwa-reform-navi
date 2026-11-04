@@ -220,22 +220,22 @@ function AreaSection() {
   );
 }
 
-/* ─── おすすめ外構業者 TOP3 ─── */
+/* ─── 掲載業者（掲載順の最初の3社） ─── */
 function TopCompanies() {
   const top3 = companies.slice(0, 3);
   return (
     <section className="gr-section scroll-mt-20">
       <div className="gr-container">
         <h2 className="gr-h2">
-          おすすめ外構業者 TOP3
-          <small>編集部が厳選した業者を紹介しています</small>
+          掲載している外構業者
+          <small>掲載順の最初の3社です。並びは掲載順で、評価による順位ではありません</small>
         </h2>
         <ul className="grid gap-4 md:grid-cols-3">
           {top3.map((company, i) => (
             <li key={company.slug} className="gr-card flex flex-col p-5 md:p-6" data-reveal={String(i)}>
               <p className="flex items-center gap-3">
                 <span className="inline-flex h-8 min-w-[44px] items-center justify-center border border-[color:var(--gr-slate)] px-2 text-[13px] font-bold text-[color:var(--gr-slate)]">
-                  {i + 1}位
+                  {`掲載順 ${i + 1}`}
                 </span>
               </p>
               <h3 className="mt-3 text-[19px] font-bold">{company.name}</h3>
