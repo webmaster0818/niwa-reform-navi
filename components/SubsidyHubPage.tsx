@@ -127,6 +127,13 @@ export default function SubsidyHubPage({ hub, path, name, childPath, related }: 
                           s.name
                         )}
                         <div className="text-xs font-normal text-gray-400 mt-0.5">{s.pref}</div>
+                        {s.sisterPage && (
+                          <div className="text-xs font-normal mt-1 whitespace-normal min-w-[8rem]">
+                            <a href={s.sisterPage.url} className="text-primary hover:underline">
+                              {s.sisterPage.label}
+                            </a>
+                          </div>
+                        )}
                       </td>
                       <td className="p-3 text-gray-700 leading-relaxed">
                         {s.programName}

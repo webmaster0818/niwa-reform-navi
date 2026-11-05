@@ -29,6 +29,8 @@ export type Subsidy = {
   notes: string[];
   extraSources: SubsidySource[];
   checked: string;
+  // 同じ市の解説を姉妹サイトが先に公開している場合の案内（2026-11-05 okina 承認：正本は先に公開した側）
+  sisterPage?: { url: string; label: string };
   // 自治体別ページを持つ場合のみ
   page?: {
     metaTitle: string;
