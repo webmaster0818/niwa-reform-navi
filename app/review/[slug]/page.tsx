@@ -31,11 +31,14 @@ export default async function ReviewPage({ params }: Props) {
 
   const modified: string = r.modifiedISO ?? "2026-06-16";
   const rating = r.ratingBlock; // optional (Google rating)
+  // 出典つきの口コミが本文に無いページは、見出し・パンくずに「口コミ・評判」を出さない（§9.1-2）
+  const hasQuotes = Array.isArray(r.reviews) && r.reviews.length > 0;
+  const strengthsHeading = hasQuotes ? "口コミから見る強み・特徴" : "サービスの特徴";
 
   const toc = [
     { id: "basic", label: `${r.companyName}とは（運営会社・基本情報）` },
     { id: "reviews", label: r.reviewsHeading },
-    { id: "strengths", label: "口コミから見る強み・特徴" },
+    { id: "strengths", label: strengthsHeading },
     { id: "cautions", label: "利用前の注意点" },
     { id: "recommended", label: "おすすめの利用者" },
     { id: "faq", label: "よくある質問" },
@@ -70,10 +73,10 @@ export default async function ReviewPage({ params }: Props) {
     <article className="max-w-3xl mx-auto px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Breadcrumb items={[{ label: "口コミ・評判", href: "/review/" }, { label: r.companyName }]} />
+      <Breadcrumb items={[{ label: hasQuotes ? "口コミ・評判" : "外構業者の基本情報", href: "/review/" }, { label: r.companyName }]} />
 
       <header className="mt-2">
-        <span className="label inline-block mb-3 text-primary">業者の口コミ・評判</span>
+        <span className="label inline-block mb-3 text-primary">{hasQuotes ? "業者の口コミ・評判" : "業者の基本情報"}</span>
         <h1 className="text-2xl sm:text-3xl font-bold leading-snug text-text-primary mb-4">{r.title}</h1>
         <div className="flex items-center gap-3 text-sm text-text-muted mb-6">
           <time dateTime={modified}>最終更新：{r.updatedAt}</time>
@@ -171,7 +174,7 @@ export default async function ReviewPage({ params }: Props) {
 
       {/* Strengths */}
       <section id="strengths" className="scroll-mt-20 mb-12">
-        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">口コミから見る強み・特徴</h2>
+        <h2 className="text-xl font-bold text-text-primary border-l-4 border-primary pl-3 mb-5">{strengthsHeading}</h2>
         <div className="space-y-5">
           {r.strengths.map((s: any, i: number) => (
             <div key={i}>

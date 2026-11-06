@@ -54,6 +54,8 @@ export default async function AreaPage({ params }: Props) {
     ...c,
     ...coverageOf(c.slug, c.coverage),
     hasReview: reviews.some((r) => r.slug === c.slug),
+    // 出典つきの口コミがあるページだけ「口コミを見る」と書く
+    hasQuotes: reviews.some((r) => r.slug === c.slug && r.reviews.length > 0),
   }));
 
   const jsonLd = {
@@ -140,7 +142,7 @@ export default async function AreaPage({ params }: Props) {
                     {c.hasReview && (
                       <div className="mt-1">
                         <Link href={`/review/${c.slug}/`} className="text-xs text-gray-500 hover:underline">
-                          口コミを見る
+                          {c.hasQuotes ? "口コミを見る" : "基本情報を見る"}
                         </Link>
                       </div>
                     )}

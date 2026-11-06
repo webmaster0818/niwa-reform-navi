@@ -117,9 +117,19 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
 
       {reviewPage && (
         <p className="text-sm text-gray-700 mb-6">
-          {company.name}の口コミ・評判は、
-          <Link href={`/review/${slug}/`} className="text-primary underline">{company.name}の評判（別ページ）</Link>
-          にまとめています。
+          {(reviewPage as { reviews?: unknown[] }).reviews?.length ? (
+            <>
+              {company.name}の口コミ・評判は、
+              <Link href={`/review/${slug}/`} className="text-primary underline">{company.name}の評判（別ページ）</Link>
+              にまとめています。
+            </>
+          ) : (
+            <>
+              {company.name}の運営会社・対応エリア・サービス内容は、
+              <Link href={`/review/${slug}/`} className="text-primary underline">{company.name}の基本情報（別ページ）</Link>
+              にまとめています。
+            </>
+          )}
         </p>
       )}
 

@@ -28,7 +28,7 @@ export default function ReviewIndex() {
                   <span className="text-warning">★</span> {(r as any).ratingBlock.rating}（{(r as any).ratingBlock.reviewCount}件）
                 </span>
               ) : (
-                <span className="text-xs text-text-muted whitespace-nowrap">公式の声</span>
+                <span className="text-xs text-text-muted whitespace-nowrap">{r.reviews.length > 0 ? "公式の声" : "基本情報"}</span>
               )}
             </div>
             <p className="text-sm text-text-secondary line-clamp-2 leading-7">{r.summary}</p>
