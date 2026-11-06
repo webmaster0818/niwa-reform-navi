@@ -161,6 +161,11 @@ export default async function ReviewPage({ params }: Props) {
         ) : (
           <div className="rounded-2xl border border-border bg-surface-alt p-5 text-[15px] leading-8 text-text-secondary">
             {r.reviewsEmptyNote}
+            {r.reviewsEmptyNoteSource && (
+              <p className="mt-2 text-xs text-text-muted">
+                出典：<a href={r.reviewsEmptyNoteSource.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">{r.reviewsEmptyNoteSource.label}</a>（{r.reviewsEmptyNoteSource.checked}確認）
+              </p>
+            )}
           </div>
         )}
         <p className="mt-4 text-xs text-text-muted">{r.reviewsSourceNote}</p>
