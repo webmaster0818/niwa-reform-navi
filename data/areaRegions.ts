@@ -14,6 +14,11 @@ export type RegionGroup = {
   cities: CityLink[];
 };
 
+// 2026-11-07 追加の東京10区（ブロック塀撤去）は、TOP「エリアから探す」と件数に出すかが okina 判断待ち
+// （11/4 刷新の TOP は変えない・balcony の同じ件と同じ扱い）。判断が出るまで TOP には出さず、一覧・関連リンクから案内する
+const TOP_PENDING = new Set(["chiyoda", "minato", "bunkyo", "taito", "sumida", "koto", "meguro", "shibuya", "kita", "arakawa"]);
+const topBlockWallPages = blockWallPages.filter((s) => !TOP_PENDING.has(s.slug));
+
 function collect(): CityLink[] {
   const map = new Map<string, CityLink>();
   const add = (s: { slug: string; name: string; pref: string }, href: string, label: string) => {
@@ -21,7 +26,7 @@ function collect(): CityLink[] {
     cur.links.push({ href, label });
     map.set(s.slug, cur);
   };
-  blockWallPages.forEach((s) => add(s, `/rule/block-wall-subsidy/${s.slug}/`, "ブロック塀撤去の補助金"));
+  topBlockWallPages.forEach((s) => add(s, `/rule/block-wall-subsidy/${s.slug}/`, "ブロック塀撤去の補助金"));
   ikegakiPages.forEach((s) => add(s, `/rule/ikegaki-subsidy/${s.slug}/`, "生垣・緑化の助成"));
   return Array.from(map.values());
 }
@@ -48,4 +53,4 @@ if (placed !== allCities.length) {
 }
 
 export const subsidyCityCount = allCities.length;
-export const subsidyPageCount = blockWallPages.length + ikegakiPages.length;
+export const subsidyPageCount = topBlockWallPages.length + ikegakiPages.length;

@@ -90,7 +90,7 @@ export default function RuleIndexPage() {
           >
             <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 leading-snug">ブロック塀撤去の補助金一覧</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
-              政令指定都市20市と東京8区の制度名・補助額・受付状況を、各自治体の公式ページで確認して一覧にしています。
+              政令指定都市20市と東京18区の制度名・補助額・受付状況を、各自治体の公式ページで確認して一覧にしています。
             </p>
             <span className="inline-block mt-3 text-sm text-primary font-bold">一覧を見る →</span>
           </Link>
