@@ -35,6 +35,7 @@ export default async function RulePage({ params }: Props) {
   const url = `${SITE}/rule/${rule.slug}/`;
   const UPDATED = rule.updated;
   const refs: { name: string; url: string }[] = "refs" in rule && Array.isArray(rule.refs) ? rule.refs : [];
+  const answer: string = "answer" in rule && typeof rule.answer === "string" ? rule.answer : "";
   const sameGroup = rules.filter((r) => r.slug !== rule.slug && r.group === rule.group);
   const otherGroups = rules.filter((r) => r.group !== rule.group);
   const related = rule.relatedWorks
@@ -90,6 +91,7 @@ export default async function RulePage({ params }: Props) {
       {/* Header */}
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-snug">{rule.h1}</h1>
+        {answer && <p className="text-gray-800 leading-relaxed mb-3">{answer}</p>}
         <p className="text-gray-600 leading-relaxed">{rule.lead}</p>
         <p className="text-xs text-gray-400 mt-4">最終更新日：{UPDATED}</p>
       </div>
