@@ -26,7 +26,7 @@
   <url><loc>https://garden-reform-navi.com/work/gate/</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://garden-reform-navi.com/work/garden-design/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://garden-reform-navi.com/work/lighting/</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://garden-reform-navi.com/work/storage/</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://garden-reform-navi.com/work/storage/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://garden-reform-navi.com/work/delivery-box/</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://garden-reform-navi.com/work/terrace-roof/</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://garden-reform-navi.com/scene/new-house/</loc><lastmod>2026-10-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -90,7 +90,7 @@
   <url><loc>https://garden-reform-navi.com/rule/nouchi-tenyo/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/ryokka-chiiki/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/fuchi-chiku/</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/sapporo/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/saitama/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/yokohama/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -128,6 +128,10 @@
   <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/shibuya/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/kita/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/arakawa/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/nakano/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/katsushika/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/toshima/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://garden-reform-navi.com/rule/block-wall-subsidy/shinjuku/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/ikegaki-subsidy/</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/ikegaki-subsidy/sendai/</loc><lastmod>2026-11-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://garden-reform-navi.com/rule/ikegaki-subsidy/nagoya/</loc><lastmod>2026-11-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
