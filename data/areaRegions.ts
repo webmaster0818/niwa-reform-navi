@@ -14,10 +14,8 @@ export type RegionGroup = {
   cities: CityLink[];
 };
 
-// 2026-11-07 追加の東京10区（ブロック塀撤去）は、TOP「エリアから探す」と件数に出すかが okina 判断待ち
-// （11/4 刷新の TOP は変えない・balcony の同じ件と同じ扱い）。判断が出るまで TOP には出さず、一覧・関連リンクから案内する
-const TOP_PENDING = new Set(["chiyoda", "minato", "bunkyo", "taito", "sumida", "koto", "meguro", "shibuya", "kita", "arakawa", "nakano", "katsushika", "toshima", "shinjuku"]);
-const topBlockWallPages = blockWallPages.filter((s) => !TOP_PENDING.has(s.slug));
+// 2026-11-09 okina 承認：11/7・11/9 追加の東京14区（ブロック塀撤去）も TOP「エリアから探す」と件数に出す
+const topBlockWallPages = blockWallPages;
 
 function collect(): CityLink[] {
   const map = new Map<string, CityLink>();

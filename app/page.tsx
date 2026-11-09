@@ -177,7 +177,7 @@ function TrustBadges() {
         </dl>
       </div>
       <p className="gr-container pb-3 text-[11px] leading-relaxed text-[color:var(--gr-muted)]">
-        ※ 数字は当サイトの掲載ページを数えた値です（2026年11月4日時点）。写真はイメージです（Unsplash・撮影 Cameron Smith）。当サイトは工事業者ではなく、依頼前の比較に使う情報サイトです。
+        ※ 数字は当サイトの掲載ページを数えた値です（2026年11月9日時点）。写真はイメージです（Unsplash・撮影 Cameron Smith）。当サイトは工事業者ではなく、依頼前の比較に使う情報サイトです。
       </p>
     </section>
   );
