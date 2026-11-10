@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const IKEGAKI_LINK_HOLD = new Set(["bunkyo", "kita", "arakawa", "nakano", "shinjuku", "katsushika"]);
+
 export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const { city } = await params;
   const s = blockWallPages.find((x) => x.slug === city);
@@ -34,7 +36,9 @@ export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const p = s.page;
   const url = `${SITE}${HUB}${s.slug}/`;
   const others = blockWallPages.filter((x) => x.slug !== s.slug);
-  const ik = ikegakiPages.find((x) => x.slug === s.slug);
+  // 2026-11-10：11/7・11/9 に新設した区のブロック塀ページは効果判定中（7日間は本文を変えない）のため、
+  // 同日追加の生垣ページへの案内リンクは 11/16 以降に出す（HOLD から外す）
+  const ik = IKEGAKI_LINK_HOLD.has(s.slug) ? undefined : ikegakiPages.find((x) => x.slug === s.slug);
 
   const toc = [
     { id: "overview", label: "制度の概要" },
