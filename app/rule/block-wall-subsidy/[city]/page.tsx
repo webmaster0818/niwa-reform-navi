@@ -31,6 +31,9 @@ const IKEGAKI_LINK_HOLD = new Set(["bunkyo", "kita", "arakawa", "nakano", "shinj
 // 2026-11-11：江東・渋谷（11/7 新設）・豊島（11/9 新設）のブロック塀ページも7日間は本文を変えないため、
 // 同日追加の生垣ページへの案内リンクは出さない（江東・渋谷は11/14以降、豊島は11/16以降に外す）
 const IKEGAKI_LINK_HOLD_1111 = new Set(["koto", "shibuya", "toshima"]);
+// 2026-11-12：墨田・目黒（11/7 新設）のブロック塀ページも7日間は本文を変えないため、
+// 同日追加の生垣ページへの案内リンクは出さない（11/14以降に外す）
+const IKEGAKI_LINK_HOLD_1112 = new Set(["sumida", "meguro"]);
 
 export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const { city } = await params;
@@ -41,7 +44,7 @@ export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const others = blockWallPages.filter((x) => x.slug !== s.slug);
   // 2026-11-10：11/7・11/9 に新設した区のブロック塀ページは効果判定中（7日間は本文を変えない）のため、
   // 同日追加の生垣ページへの案内リンクは 11/16 以降に出す（HOLD から外す）
-  const ik = IKEGAKI_LINK_HOLD.has(s.slug) || IKEGAKI_LINK_HOLD_1111.has(s.slug) ? undefined : ikegakiPages.find((x) => x.slug === s.slug);
+  const ik = IKEGAKI_LINK_HOLD.has(s.slug) || IKEGAKI_LINK_HOLD_1111.has(s.slug) || IKEGAKI_LINK_HOLD_1112.has(s.slug) ? undefined : ikegakiPages.find((x) => x.slug === s.slug);
 
   const toc = [
     { id: "overview", label: "制度の概要" },
