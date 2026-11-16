@@ -27,11 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const IKEGAKI_LINK_HOLD = new Set(["bunkyo", "kita", "arakawa", "nakano", "shinjuku", "katsushika"]);
-// 2026-11-11：江東・渋谷（11/7 新設）・豊島（11/9 新設）のブロック塀ページも7日間は本文を変えないため、
-// 同日追加の生垣ページへの案内リンクは出さない（江東・渋谷は11/14以降、豊島は11/16以降に外す）
-// 2026-11-14：江東・渋谷を外した（豊島は 11/16 まで残す）。墨田・目黒（旧 IKEGAKI_LINK_HOLD_1112）も 11/14 に解除
-const IKEGAKI_LINK_HOLD_1111 = new Set(["toshima"]);
+// 2026-11-16：豊島（旧 IKEGAKI_LINK_HOLD_1111）と文京・北・荒川・中野・新宿を解除（各区の公式ページを同日に開き制度の掲載継続を確認）。
+// 葛飾は区の公式ページの更新日が平成30年9月1日のまま（判断待ち）のため、案内リンクは出さずに残す
+const IKEGAKI_LINK_HOLD = new Set(["katsushika"]);
 
 export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const { city } = await params;
@@ -42,7 +40,7 @@ export default async function BlockWallSubsidyCityPage({ params }: Props) {
   const others = blockWallPages.filter((x) => x.slug !== s.slug);
   // 2026-11-10：11/7・11/9 に新設した区のブロック塀ページは効果判定中（7日間は本文を変えない）のため、
   // 同日追加の生垣ページへの案内リンクは 11/16 以降に出す（HOLD から外す）
-  const ik = IKEGAKI_LINK_HOLD.has(s.slug) || IKEGAKI_LINK_HOLD_1111.has(s.slug) ? undefined : ikegakiPages.find((x) => x.slug === s.slug);
+  const ik = IKEGAKI_LINK_HOLD.has(s.slug) ? undefined : ikegakiPages.find((x) => x.slug === s.slug);
 
   const toc = [
     { id: "overview", label: "制度の概要" },
