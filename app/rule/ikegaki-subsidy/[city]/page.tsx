@@ -109,6 +109,20 @@ export default async function IkegakiSubsidyCityPage({ params }: Props) {
         <p className="text-xs text-gray-400 mt-4">最終更新日：{s.checked}（{s.name}の公式ページを同日に確認）</p>
       </div>
 
+      {s.confirmNotice && (
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
+          <h2 className="text-base font-bold text-amber-900 mb-2">最新の内容は{s.name}にご確認ください</h2>
+          <p className="text-sm text-amber-900/90 leading-relaxed">{s.confirmNotice.text}</p>
+          <p className="text-xs text-amber-900/80 mt-2">
+            出典：
+            <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline">
+              {s.pageTitle}
+            </a>
+            （{s.confirmNotice.checked} 確認）
+          </p>
+        </div>
+      )}
+
       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
         <h2 className="text-base font-bold text-amber-900 mb-2">本ページの見方</h2>
         <ul className="space-y-1.5 text-sm text-amber-900/90 leading-relaxed">

@@ -31,6 +31,8 @@ export type Subsidy = {
   checked: string;
   // 同じ市の解説を姉妹サイトが先に公開している場合の案内（2026-11-05 okina 承認：正本は先に公開した側）
   sisterPage?: { url: string; label: string };
+  // 公式ページの更新日が古い自治体で、区に最新の内容を確認するよう冒頭で案内する（2026-11-18 okina 承認 23：葛飾区）
+  confirmNotice?: { text: string; checked: string };
   // 自治体別ページを持つ場合のみ
   page?: {
     metaTitle: string;
